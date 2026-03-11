@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 118" width="260" height="118">
+  <text
+    x="130"
+    y="52"
+    font-family="'Helvetica Neue', 'Arial Black', Helvetica, Arial, sans-serif"
+    font-weight="900"
+    font-size="56"
+    fill="#111111"
+    text-anchor="middle"
+    letter-spacing="-0.5">ICONIC</text>
+  <text
+    x="130"
+    y="108"
+    font-family="'Helvetica Neue', 'Arial Black', Helvetica, Arial, sans-serif"
+    font-weight="900"
+    font-size="56"
+    fill="#111111"
+    text-anchor="middle"
+    letter-spacing="-0.5">FACE</text>
+</svg>
