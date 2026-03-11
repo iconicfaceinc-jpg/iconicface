@@ -1,12 +1,15 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "routes": [
+    {
+      "src": "/extensions",
+      "dest": "/extensions.html"
+    },
+    {
+      "src": "/lash-brow",
+      "dest": "/lash-brow.html"
+    },
     {
       "src": "/(.*)",
       "dest": "/$1"
