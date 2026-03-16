@@ -15,7 +15,15 @@
 html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;background:var(--blanc);color:var(--texte);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
 
-.topbar{background:var(--noir);color:rgba(255,255,255,.65);text-align:center;padding:10px 24px;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;}
+.topbar { background: var(--noir); color: rgba(255,255,255,0.65); text-align: center; padding: 10px 24px; font-size: 10.5px; letter-spacing: 0.28em; font-weight: 400; text-transform: uppercase; }
+@media (max-width: 768px) {
+  .topbar { overflow: hidden; padding: 10px 0; white-space: nowrap; }
+  .topbar-inner { display: inline-flex; animation: topbar-scroll 10s linear infinite; }
+}
+@keyframes topbar-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
 .sep{opacity:.25;}
 
 header{position:sticky;top:0;z-index:200;background:var(--blanc);border-bottom:1px solid var(--bord);transition:box-shadow .3s;}
@@ -49,7 +57,11 @@ nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0
 .hero-sub{font-family:'Inter',sans-serif;font-size:clamp(13px,1.4vw,17px);font-weight:300;letter-spacing:.07em;color:rgba(255,255,255,.6);font-style:italic;display:block;margin-bottom:36px;}
 .hero-cta{display:inline-block;background:#fff;color:var(--noir);padding:16px 40px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;font-weight:700;transition:background .2s;}
 .hero-cta:hover{background:rgba(255,255,255,.85);}
-
+@media(max-width:720px){
+  .hero{height:100svh;min-height:unset;}
+  .hero-content{padding:0 22px 48px;}
+  .hero-bg{object-position:center center;}
+}
 /* MARQUEE */
 .mq-wrap{background:var(--noir);overflow:hidden;padding:12px 0;border-top:1px solid rgba(255,255,255,.06);}
 .mq-track{display:flex;animation:mq 28s linear infinite;white-space:nowrap;}
@@ -198,11 +210,10 @@ footer{background:var(--blanc);border-top:1px solid var(--bord);padding:64px 56p
 <body>
 
 <div class="topbar">
-  <span>Diagnostic morphologique offert</span>
-  <span class="sep">·</span>
-  <span>Déplacement Paris &amp; Île-de-France</span>
-  <span class="sep">·</span>
-  <span>Extensions · Lash Lift · Brow Lift</span>
+  <span class="topbar-inner">
+    <span>Extensions de Cils · Lash Lift · Brow Lift · Paris & Île-de-France &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <span>Extensions de Cils · Lash Lift · Brow Lift · Paris & Île-de-France &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  </span>
 </div>
 
 <header id="hdr">
