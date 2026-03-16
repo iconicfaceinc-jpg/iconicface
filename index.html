@@ -47,6 +47,8 @@ nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0
 .m-book{margin-top:28px;background:var(--noir)!important;color:#fff!important;font-family:'Inter',sans-serif!important;font-size:10px!important;letter-spacing:.26em!important;padding:14px 44px;font-weight:700!important;}
 
 /* HERO */
+
+/* MARQUEE */
 .hero{position:relative;width:100%;height:calc(100vh - 68px - 40px);min-height:520px;overflow:hidden;background:var(--noir);display:flex;flex-direction:column;justify-content:flex-end;}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.82;}
 .hero-dark{position:absolute;inset:0;background:linear-gradient(135deg,#1c1c1c 0%,#2a2a2a 60%,#111 100%);}
@@ -57,12 +59,7 @@ nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0
 .hero-sub{font-family:'Inter',sans-serif;font-size:clamp(13px,1.4vw,17px);font-weight:300;letter-spacing:.07em;color:rgba(255,255,255,.6);font-style:italic;display:block;margin-bottom:36px;}
 .hero-cta{display:inline-block;background:#fff;color:var(--noir);padding:16px 40px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;font-weight:700;transition:background .2s;}
 .hero-cta:hover{background:rgba(255,255,255,.85);}
-@media(max-width:720px){
-  .hero{height:100svh;min-height:unset;}
-  .hero-content{padding:0 22px 48px;}
-  .hero-bg{object-position:center center;}
-}
-/* MARQUEE */
+
 .mq-wrap{background:var(--noir);overflow:hidden;padding:12px 0;border-top:1px solid rgba(255,255,255,.06);}
 .mq-track{display:flex;animation:mq 28s linear infinite;white-space:nowrap;}
 .mq-item{font-size:10px;letter-spacing:.38em;color:rgba(255,255,255,.35);text-transform:uppercase;padding:0 36px;flex-shrink:0;}
@@ -187,7 +184,8 @@ footer{background:var(--blanc);border-top:1px solid var(--bord);padding:64px 56p
   .nav-logo-name{font-size:24px;}
   .hero{height:calc(100svh - 58px - 36px);min-height:460px;}
   .hero-content{padding:0 22px 48px;}
-  .hero-title{font-size:54px;}
+  .hero-title{font-size:54px;}  
+  .hero-bg{object-fit:cover;object-position:center 70%;}
   .svc-card{height:380px;padding:28px;}
   .svc-name{font-size:42px;}
   .about-left{padding:52px 22px;}
@@ -247,14 +245,9 @@ footer{background:var(--blanc);border-top:1px solid var(--bord);padding:64px 56p
 </div>
 
 <section class="hero">
-  <img class="hero-bg" src="images/hero.gif" alt="">
-  <!--
-    GIF   → <img class="hero-bg" src="images/hero.gif" alt="">
       <video class="hero-bg" autoplay muted loop playsinline>
-               <source src="images/hero-video.mp4" type="video/mp4">
+               <source src="images/hero_vid.mp4" type="video/mp4">
              </video>
-    Supprimez la ligne hero-dark ci-dessous une fois le fichier ajouté.
-  -->
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <span class="hero-eyebrow">Iconic Face · Paris</span>
