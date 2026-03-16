@@ -254,12 +254,11 @@ footer{background:var(--blanc);border-top:1px solid var(--bord);padding:64px 56p
 </div>
 
 <section class="hero">
-      <div class="hero-vid-wrap">
-  <video class="hero-bg" autoplay muted loop playsinline>
-    <source media="(max-width:720px)" src="images/hero_vid_mobile.mp4" type="video/mp4">
-    <source src="images/hero_vid.mp4" type="video/mp4">
-  </video>
-</div>
+  <div class="hero-vid-wrap">
+    <video class="hero-bg" id="heroVid" autoplay muted loop playsinline>
+      <source src="images/hero_vid.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <span class="hero-eyebrow">Iconic Face · Paris</span>
@@ -438,7 +437,7 @@ footer{background:var(--blanc);border-top:1px solid var(--bord);padding:64px 56p
       <a href="https://instagram.com/iconicface.fr" target="_blank" rel="noopener">Instagram</a>
       <a href="https://tiktok.com/@iconicfaceinc" target="_blank" rel="noopener">TikTok</a>
       <a href="https://www.youtube.com/@iconicface.officiel" target="_blank" rel="noopener">YouTube</a>
-      <a href="mailto:iconicfaceinc@gmail.com">Contact</a>
+      <a href="/cdn-cgi/l/email-protection#29404a4647404a4f484a4c40474a694e44484045074a4644">Contact</a>
     </div>
   </div>
 </footer>
@@ -447,33 +446,41 @@ footer{background:var(--blanc);border-top:1px solid var(--bord);padding:64px 56p
   <span>ICONIC FACE</span>
 </div>
 
-<script>
-const hdr = document.getElementById('hdr');
-window.addEventListener('scroll', () => {
-  hdr.style.boxShadow = window.scrollY > 30 ? '0 2px 20px rgba(0,0,0,.08)' : 'none';
-});
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-const burger = document.getElementById('burger');
-const mmenu  = document.getElementById('mmenu');
-const mclose = document.getElementById('mclose');
-const close  = () => { mmenu.classList.remove('open'); document.body.style.overflow=''; };
-burger.addEventListener('click', () => { mmenu.classList.add('open'); document.body.style.overflow='hidden'; });
-mclose.addEventListener('click', close);
-mmenu.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    close();
-    const href = a.getAttribute('href');
-    if (href && href.startsWith('#')) {
-      setTimeout(() => {
-        const t = document.querySelector(href);
-        if (t) t.scrollIntoView({ behavior:'smooth' });
-      }, 280);
-    }
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Vidéo mobile
+  const heroVid = document.getElementById('heroVid');
+  if (heroVid && window.innerWidth <= 720) {
+    heroVid.querySelector('source').src = 'images/hero_vid_mobile.mp4';
+    heroVid.load();
+  }
+  // Scroll shadow
+  const hdr = document.getElementById('hdr');
+  window.addEventListener('scroll', () => {
+    hdr.style.boxShadow = window.scrollY > 30 ? '0 2px 20px rgba(0,0,0,.08)' : 'none';
   });
-});
+  // Reveal animations
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // Menu mobile
+  const burger = document.getElementById('burger');
+  const mmenu  = document.getElementById('mmenu');
+  const mclose = document.getElementById('mclose');
+  const close  = () => { mmenu.classList.remove('open'); document.body.style.overflow=''; };
+  burger.addEventListener('click', () => { mmenu.classList.add('open'); document.body.style.overflow='hidden'; });
+  mclose.addEventListener('click', close);
+  mmenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      close();
+      const href = a.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        setTimeout(() => {
+          document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+        }, 300);
+      }
+    });
+  });
 </script>
 </body>
 </html>
