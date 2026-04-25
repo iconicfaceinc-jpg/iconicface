@@ -1,18 +1,19 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
     {
-      "src": "/extensions",
-      "dest": "/extensions.html"
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
     },
     {
-      "src": "/lash-brow",
-      "dest": "/lash-brow.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, immutable" }
+      ]
     }
   ]
 }

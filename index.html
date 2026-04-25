@@ -1,539 +1,930 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Iconic Face Paris — Extensions de Cils, Lash Lift & Brow Lift</title>
-<meta name="description" content="Iconic Face : spécialiste extensions de cils, lash lift et brow lift à Paris. Déplacement dans tout Paris et Île-de-France. Diagnostic morphologique offert.">
-<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjMGEwYTBhIiByeD0iNiIvPjx0ZXh0IHg9IjMyIiB5PSI0NiIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiNmZmZmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPklGPC90ZXh0Pjwvc3ZnPg==" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-:root{--noir:#0a0a0a;--blanc:#ffffff;--gris:#f4f2ef;--texte:#111111;--texte2:#555555;--bord:#e0ddd8;}
-html{scroll-behavior:smooth;}
-body{font-family:'Inter',sans-serif;background:var(--blanc);color:var(--texte);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iconic Face · Extensions Cils & Sourcils Paris</title>
+  <meta name="description" content="Spécialiste extensions de cils, lash lift, brow lift à Paris. Réservation rapide, résultats naturels et durables." />
+  
+  <!-- 
+    FAVICON : remplace images/favicon.png par ton image (PNG carré recommandé, 64x64px ou 512x512px)
+    Si tu n'as pas de PNG, le SVG de secours est utilisé automatiquement.
+  -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
 
-.topbar { background: var(--noir); color: rgba(255,255,255,0.65); text-align: center; padding: 10px 24px; font-size: 10.5px; letter-spacing: 0.28em; font-weight: 400; text-transform: uppercase; }
-@media (max-width: 768px) {
-  .topbar { overflow: hidden; padding: 10px 0; white-space: nowrap; }
-  .topbar-inner { display: inline-flex; animation: topbar-scroll 10s linear infinite; }
-}
-@keyframes topbar-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-.sep{opacity:.25;}
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-header{position:sticky;top:0;z-index:200;background:var(--blanc);border-bottom:1px solid var(--bord);transition:box-shadow .3s;}
-nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 48px;height:68px;}
-.nav-left{display:flex;align-items:center;gap:36px;list-style:none;}
-.nav-right{display:flex;align-items:center;justify-content:flex-end;gap:28px;list-style:none;}
-.nav-left a,.nav-right a{font-size:10.5px;letter-spacing:.18em;font-weight:500;color:var(--texte);text-decoration:none;text-transform:uppercase;transition:opacity .2s;}
-.nav-left a:hover,.nav-right a:hover{opacity:.4;}
-.nav-logo{text-align:center;text-decoration:none;display:block;}
-.nav-logo-name{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:.1em;color:var(--texte);line-height:1;display:block;}
-.nav-logo-sub{font-size:7.5px;letter-spacing:.44em;color:var(--texte2);text-transform:uppercase;display:block;margin-top:2px;}
-.nav-book{background:var(--noir);color:#fff!important;padding:10px 22px;font-size:9.5px!important;letter-spacing:.24em!important;font-weight:700!important;text-decoration:none;transition:opacity .2s!important;white-space:nowrap;}
-.nav-book:hover{opacity:.7!important;}
-.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;}
-.burger span{display:block;width:22px;height:1.5px;background:var(--texte);}
-.m-menu{display:none;position:fixed;inset:0;background:var(--blanc);z-index:500;flex-direction:column;align-items:center;justify-content:center;gap:4px;}
-.m-menu.open{display:flex;}
-.m-close{position:absolute;top:20px;right:24px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--texte);padding:8px;}
-.m-menu a{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:.04em;color:var(--texte);text-decoration:none;line-height:1;transition:opacity .2s;}
-.m-menu a:hover{opacity:.35;}
-.m-book{margin-top:28px;background:var(--noir)!important;color:#fff!important;font-family:'Inter',sans-serif!important;font-size:10px!important;letter-spacing:.26em!important;padding:14px 44px;font-weight:700!important;}
+  <style>
+    /* ===========================
+       DESIGN TOKENS
+    =========================== */
+    :root {
+      --lavender-bg: #e8e4f5;
+      --lavender-light: #f0edfc;
+      --purple-main: #7c5cbf;
+      --purple-dark: #4a2d8a;
+      --purple-soft: #b49de0;
+      --purple-muted: #d4c9f0;
+      --black: #1a1220;
+      --white: #fdfcff;
+      --pink-accent: #e8a0bf;
+      --gold: #c9a96e;
 
-/* HERO */
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', sans-serif;
 
-/* MARQUEE */
-.hero{position:relative;width:100%;height:calc(100vh - 68px - 40px);min-height:520px;overflow:hidden;background:var(--noir);display:flex;flex-direction:column;justify-content:flex-end;}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.82;}
-.hero-vid-wrap{position:absolute;inset:0;width:100%;height:100%;}
-.hero-dark{position:absolute;inset:0;background:linear-gradient(135deg,#1c1c1c 0%,#2a2a2a 60%,#111 100%);}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.65) 0%,rgba(0,0,0,.15) 60%,transparent 100%);}
-.hero-content{position:relative;z-index:2;padding:0 64px 72px;}
-.hero-eyebrow{font-size:10px;letter-spacing:.46em;color:rgba(255,255,255,.5);text-transform:uppercase;display:block;margin-bottom:18px;}
-.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(60px,8.5vw,116px);color:#fff;line-height:.9;letter-spacing:.02em;margin-bottom:10px;}
-.hero-sub{font-family:'Inter',sans-serif;font-size:clamp(13px,1.4vw,17px);font-weight:300;letter-spacing:.07em;color:rgba(255,255,255,.6);font-style:italic;display:block;margin-bottom:36px;}
-.hero-cta{display:inline-block;background:#fff;color:var(--noir);padding:16px 40px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;font-weight:700;transition:background .2s;}
-.hero-cta:hover{background:rgba(255,255,255,.85);}
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 32px;
+      --radius-pill: 999px;
 
-.mq-wrap{background:var(--noir);overflow:hidden;padding:12px 0;border-top:1px solid rgba(255,255,255,.06);}
-.mq-track{display:flex;animation:mq 28s linear infinite;white-space:nowrap;}
-.mq-item{font-size:10px;letter-spacing:.38em;color:rgba(255,255,255,.35);text-transform:uppercase;padding:0 36px;flex-shrink:0;}
-.mq-dot{color:rgba(255,255,255,.12);margin-left:36px;}
-@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+      --shadow-soft: 0 4px 24px rgba(124, 92, 191, 0.12);
+      --shadow-card: 0 8px 40px rgba(74, 45, 138, 0.15);
+      --shadow-btn: 0 4px 20px rgba(124, 92, 191, 0.35);
+    }
 
-/* WHATSAPP FLOAT */
-.wa-float{position:fixed;bottom:28px;right:28px;z-index:999;display:flex;align-items:center;gap:12px;background:#25D366;color:#fff;text-decoration:none;padding:13px 22px 13px 18px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;box-shadow:0 4px 24px rgba(37,211,102,.35);transition:opacity .2s,transform .2s;}
-.wa-float:hover{opacity:.9;transform:translateY(-2px);}
-.wa-float svg{flex-shrink:0;}
-@media(max-width:720px){.wa-float{bottom:18px;right:18px;padding:12px 16px 12px 14px;font-size:10px;gap:9px;}}
+    /* ===========================
+       RESET & BASE
+    =========================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font-body);
+      background: var(--lavender-bg);
+      color: var(--black);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
 
-/* GOOGLE FICHE BAND */
-.gfiche-band{background:var(--gris);border-bottom:1px solid var(--bord);padding:36px 56px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
-.gfiche-left{display:flex;align-items:center;gap:16px;}
-.gfiche-stars{font-size:18px;}
-.gfiche-info{}
-.gfiche-num{font-family:'Bebas Neue',sans-serif;font-size:42px;line-height:1;color:var(--texte);}
-.gfiche-sub{font-size:10px;letter-spacing:.16em;color:var(--texte2);text-transform:uppercase;}
-.gfiche-text{font-size:13px;line-height:1.7;color:var(--texte2);font-weight:300;max-width:320px;}
-.gfiche-btns{display:flex;gap:10px;flex-wrap:wrap;}
-.gfiche-btn{display:inline-flex;align-items:center;gap:8px;background:var(--noir);color:#fff;padding:12px 22px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;font-weight:600;transition:opacity .2s;}
-.gfiche-btn:hover{opacity:.7;}
-.gfiche-btn2{display:inline-flex;align-items:center;border:1px solid var(--bord);color:var(--texte);padding:12px 22px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:border-color .2s;}
-.gfiche-btn2:hover{border-color:var(--texte);}
-@media(max-width:720px){.gfiche-band{padding:28px 18px;flex-direction:column;align-items:flex-start;}}
+    /* ===========================
+       NOISE TEXTURE OVERLAY
+    =========================== */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
 
-/* SERVICES */
-.svc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;}
-.svc-card{position:relative;height:600px;overflow:hidden;display:flex;align-items:flex-end;padding:40px 48px;text-decoration:none;color:#fff;background:var(--noir);}
-.svc-img{position:absolute;inset:0;}
-.svc-img img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.58);transition:transform .8s ease,filter .8s ease;display:block;}
-.svc-card:hover .svc-img img{transform:scale(1.05);filter:brightness(.45);}
-.svc-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.2) 50%,transparent 100%);transition:background .4s;}
-.svc-card:hover .svc-shade{background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.35) 55%,transparent 100%);}
-.svc-body{position:relative;z-index:2;}
-.svc-tag{font-size:9px;letter-spacing:.46em;text-transform:uppercase;color:rgba(255,255,255,.45);display:block;margin-bottom:10px;}
-.svc-name{font-family:'Bebas Neue',sans-serif;font-size:54px;letter-spacing:.03em;line-height:.93;display:block;margin-bottom:18px;}
-.svc-link{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.55);border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:3px;transition:color .2s,border-color .2s;}
-.svc-card:hover .svc-link{color:#fff;border-color:rgba(255,255,255,.65);}
+    /* ===========================
+       LAYOUT WRAPPER
+    =========================== */
+    .page { position: relative; z-index: 1; max-width: 480px; margin: 0 auto; }
 
-/* ABOUT */
-.about{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--bord);}
-.about-left{background:var(--gris);padding:96px 72px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--bord);}
-.about-eye{font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:var(--texte2);display:block;margin-bottom:20px;}
-.about-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(46px,5vw,70px);line-height:.92;letter-spacing:.02em;color:var(--texte);margin-bottom:24px;}
-.about-text{font-size:14px;line-height:1.95;color:var(--texte2);font-weight:300;max-width:360px;}
-.about-btn{display:inline-block;margin-top:36px;background:var(--noir);color:#fff;padding:14px 32px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;font-weight:600;transition:opacity .2s;}
-.about-btn:hover{opacity:.7;}
-.about-right{display:grid;grid-template-rows:1fr 1fr;}
-.stat{display:flex;flex-direction:column;justify-content:center;padding:48px 60px;border-bottom:1px solid var(--bord);}
-.stat:last-child{border-bottom:none;}
-.stat-n{font-family:'Bebas Neue',sans-serif;font-size:76px;line-height:1;color:var(--texte);letter-spacing:-.01em;}
-.stat-l{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--texte2);margin-top:8px;}
+    /* ===========================
+       STICKY WHATSAPP CTA
+    =========================== */
+    .wa-sticky {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: white;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 14px;
+      padding: 14px 20px;
+      border-radius: var(--radius-pill);
+      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: wa-pulse 2.5s ease-in-out infinite;
+    }
+    .wa-sticky:active { transform: scale(0.96); }
+    .wa-sticky svg { flex-shrink: 0; }
+    @keyframes wa-pulse {
+      0%, 100% { box-shadow: 0 6px 28px rgba(37, 211, 102, 0.4); }
+      50% { box-shadow: 0 6px 36px rgba(37, 211, 102, 0.65); }
+    }
 
-/* GOOGLE BAND */
-.google-band{border-top:1px solid var(--bord);border-bottom:1px solid var(--bord);padding:44px 56px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;}
-.g-left{display:flex;align-items:center;gap:20px;}
-.g-stars{font-size:22px;color:var(--texte);}
-.g-num{font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--texte);line-height:1;display:block;}
-.g-sub{font-size:11px;letter-spacing:.12em;color:var(--texte2);font-weight:300;}
-.g-text{font-size:13px;line-height:1.75;color:var(--texte2);font-weight:300;max-width:360px;}
-.g-btns{display:flex;gap:12px;flex-wrap:wrap;}
-.btn-g{display:inline-flex;align-items:center;gap:9px;background:var(--noir);color:#fff;padding:13px 26px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;font-weight:600;transition:opacity .2s;}
-.btn-g:hover{opacity:.72;}
-.btn-g svg{width:15px;height:15px;flex-shrink:0;}
-.btn-g2{display:inline-flex;align-items:center;border:1px solid var(--bord);color:var(--texte);padding:13px 26px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:border-color .2s;}
-.btn-g2:hover{border-color:var(--texte);}
+    /* ===========================
+       HEADER / HERO
+    =========================== */
+    .hero {
+      background: linear-gradient(160deg, #f5f2ff 0%, var(--lavender-bg) 60%, #ddd4f5 100%);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140%;
+      height: 80px;
+      background: var(--lavender-bg);
+      border-radius: 50%;
+    }
 
-/* REVIEWS */
-.reviews{padding:96px 56px;background:var(--gris);}
-.sec-eye{font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:var(--texte2);display:block;margin-bottom:12px;}
-.sec-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,4vw,58px);letter-spacing:.02em;line-height:.93;color:var(--texte);margin-bottom:52px;}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bord);}
-.rev{background:var(--blanc);padding:48px 40px;}
-.rev-stars{font-size:14px;color:var(--texte);margin-bottom:18px;}
-.rev-text{font-size:13.5px;line-height:1.9;color:var(--texte2);font-weight:300;font-style:italic;margin-bottom:24px;}
-.rev-name{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--texte);font-weight:600;}
-.rev-svc{font-size:10px;letter-spacing:.14em;color:var(--texte2);margin-top:4px;}
+    .hero-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin: 0 auto 16px;
+      filter: drop-shadow(0 4px 16px rgba(124,92,191,0.25));
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
 
-/* NEWSLETTER — sans formulaire, juste titre + réseaux */
-.nl{background:var(--noir);padding:96px 56px;display:flex;flex-direction:column;align-items:flex-start;}
-.nl-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,6vw,88px);color:#fff;letter-spacing:.02em;line-height:.9;}
-.nl-sub{font-size:13px;line-height:1.9;color:rgba(255,255,255,.42);font-weight:300;margin-top:18px;max-width:420px;}
-.nl-divider{width:40px;height:1px;background:rgba(255,255,255,.15);margin:40px 0;}
-.nl-socials{display:flex;flex-direction:row;gap:40px;flex-wrap:wrap;}
-.nl-soc-link{display:inline-flex;align-items:center;gap:14px;text-decoration:none;color:rgba(255,255,255,.5);transition:color .2s;}
-.nl-soc-link:hover{color:#fff;}
-.nl-soc-link svg{opacity:.65;transition:opacity .2s;flex-shrink:0;}
-.nl-soc-link:hover svg{opacity:1;}
-.nl-soc-link span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:400;}
+    /* Logo fallback (SVG inline) */
+    .hero-logo-fallback {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 16px;
+      animation: float 4s ease-in-out infinite;
+    }
 
-/* FOOTER */
-footer{background:var(--blanc);border-top:1px solid var(--bord);padding:64px 56px 36px;}
-.ft{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;margin-bottom:52px;}
-.ft-logo{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.1em;color:var(--texte);display:block;margin-bottom:10px;}
-.ft-desc{font-size:12px;line-height:1.9;color:var(--texte2);font-weight:300;max-width:200px;}
-.ft-head{font-size:10px;letter-spacing:.38em;text-transform:uppercase;color:var(--texte);font-weight:600;display:block;margin-bottom:18px;}
-.ft ul{list-style:none;}
-.ft ul li{margin-bottom:9px;}
-.ft ul li a{font-size:13px;color:var(--texte2);text-decoration:none;font-weight:300;transition:color .2s;}
-.ft ul li a:hover{color:var(--texte);}
-.ft-soc-icons{display:flex;gap:18px;margin-top:4px;}
-.ft-soc-icons a{color:var(--texte2);transition:color .2s;display:flex;align-items:center;}
-.ft-soc-icons a:hover{color:var(--texte);}
-.ft-nl-form{display:flex;border:1px solid var(--bord);}
-.ft-nl-in{flex:1;background:transparent;border:none;padding:11px 14px;color:var(--texte);font-family:'Inter',sans-serif;font-size:12px;outline:none;}
-.ft-nl-in::placeholder{color:var(--texte2);}
-.ft-nl-btn{background:var(--noir);border:none;padding:11px 16px;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:#fff;cursor:pointer;font-weight:600;transition:opacity .2s;}
-.ft-nl-btn:hover{opacity:.7;}
-.ft-bot{border-top:1px solid var(--bord);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
-.ft-copy{font-size:11px;color:var(--texte2);font-weight:300;letter-spacing:.04em;}
-.ft-soc{display:flex;gap:24px;}
-.ft-soc a{font-size:10px;letter-spacing:.2em;color:var(--texte2);text-decoration:none;text-transform:uppercase;transition:color .2s;}
-.ft-soc a:hover{color:var(--texte);}
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--purple-muted);
+      color: var(--purple-dark);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 16px;
+    }
 
-.wordmark{background:var(--noir);overflow:hidden;line-height:0;}
-.wordmark span{font-family:'Bebas Neue',sans-serif;font-size:clamp(80px,15vw,210px);letter-spacing:-.01em;color:#fff;white-space:nowrap;display:block;line-height:.82;padding:0 24px;user-select:none;}
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--purple-dark);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--purple-main);
+    }
 
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
-.reveal.in{opacity:1;transform:translateY(0);}
+    .hero-sub {
+      font-size: 15px;
+      color: #5a4a7a;
+      margin-bottom: 28px;
+      font-weight: 300;
+    }
 
-@media(max-width:1100px){
-  nav{padding:0 28px;}
-  .svc-grid{grid-template-columns:1fr;}
-  .svc-card{height:480px;}
-  .about{grid-template-columns:1fr;}
-  .about-left{border-right:none;border-bottom:1px solid var(--bord);padding:64px 40px;}
-  .about-right{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
-  .stat:first-child{border-right:1px solid var(--bord);border-bottom:none;}
-  .nl{padding:72px 40px;}
-  .ft{grid-template-columns:1fr 1fr;gap:40px;}
-  .reviews{padding:72px 40px;}
-  .google-band{padding:40px;}
-  footer{padding:56px 40px 32px;}
-}
-@media(max-width:720px){
-  .topbar{font-size:9px;gap:10px;}
-  nav{padding:0 18px;height:58px;grid-template-columns:auto 1fr auto;}
-  .nav-logo{grid-column:2;text-align:center;}
-  .nav-left,.nav-right{display:none;}
-  .burger{display:flex;}
-  .nav-logo-name{font-size:24px;}
-  .hero{height:calc(100svh - 58px - 36px);min-height:460px;}
-  .hero-content{padding:0 22px 48px;}
-  .hero-title{font-size:54px;}
-  .hero-vid-wrap{position:absolute;inset:0;overflow:hidden;}
-  .hero-vid-wrap .hero-bg{
-  position:absolute;
-  width:100%;
-  height:100%;
-  top:0;
-  object-fit:cover;
-  object-position:center center;
-}
-  .svc-card{height:380px;padding:28px;}
-  .svc-name{font-size:42px;}
-  .about-left{padding:52px 22px;}
-  .about-right{grid-template-columns:1fr 1fr;}
-  .stat{padding:32px 24px;}
-  .stat-n{font-size:56px;}
-  .google-band{padding:32px 18px;flex-direction:column;align-items:flex-start;}
-  .reviews{padding:56px 18px;}
-  .reviews-grid{grid-template-columns:1fr;}
-  .rev{padding:36px 24px;}
-  .nl{padding:56px 18px;}
-  .nl-socials{flex-direction:column;gap:24px;}
-  footer{padding:44px 18px 28px;}
-  .ft{grid-template-columns:1fr 1fr;gap:28px;}
-  .ft-bot{flex-direction:column;align-items:flex-start;}
-  .wordmark span{font-size:58px;}
-}
-</style>
+    .hero-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .btn-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--purple-main), var(--purple-dark));
+      color: white;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 16px;
+      padding: 16px 24px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-btn);
+      transition: transform 0.15s, box-shadow 0.15s;
+      border: none;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn-primary:active { transform: scale(0.97); }
+
+    .btn-secondary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: white;
+      color: var(--purple-dark);
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 15px;
+      padding: 14px 24px;
+      border-radius: var(--radius-pill);
+      border: 1.5px solid var(--purple-muted);
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn-secondary:active { transform: scale(0.97); }
+
+    /* ===========================
+       TRUST STRIP
+    =========================== */
+    .trust-strip {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 24px 24px 0;
+    }
+    .trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .trust-num {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--purple-dark);
+      line-height: 1;
+    }
+    .trust-label {
+      font-size: 11px;
+      color: #7a6a9a;
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+    .trust-divider {
+      width: 1px;
+      height: 40px;
+      background: var(--purple-muted);
+      align-self: center;
+    }
+
+    /* ===========================
+       SECTIONS SHARED
+    =========================== */
+    section { padding: 48px 20px; }
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple-main);
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--purple-dark);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+    .section-sub {
+      font-size: 14px;
+      color: #6a5a8a;
+      margin-bottom: 28px;
+      font-weight: 300;
+    }
+
+    /* ===========================
+       PRESTATIONS (TARIFS)
+    =========================== */
+    .prestations { background: white; border-radius: var(--radius-lg) var(--radius-lg) 0 0; margin-top: 32px; }
+
+    .prestation-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--lavender-light);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      margin-bottom: 12px;
+      transition: transform 0.15s, box-shadow 0.15s;
+      cursor: default;
+    }
+    .prestation-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-card); }
+
+    .prestation-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-sm);
+      background: var(--purple-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    /* Quand l'icône est une image */
+    .prestation-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+    }
+    .prestation-info { flex: 1; }
+    .prestation-name {
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--purple-dark);
+    }
+    .prestation-desc {
+      font-size: 12px;
+      color: #8a7aaa;
+      margin-top: 2px;
+    }
+    .prestation-price {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--purple-main);
+      white-space: nowrap;
+    }
+    .prestation-price span {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 400;
+      color: #9a8ab0;
+      text-align: right;
+    }
+
+    .cta-rdv-inline {
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    /* ===========================
+       GALERIE RÉSULTATS
+    =========================== */
+    .galerie { background: var(--lavender-bg); }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .result-card {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--purple-muted);
+      aspect-ratio: 4/5;
+      position: relative;
+    }
+    .result-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .result-card-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--purple-main);
+      font-size: 12px;
+      text-align: center;
+      padding: 12px;
+    }
+    .result-card-placeholder .icon { font-size: 28px; opacity: 0.5; }
+    .result-tag {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(4px);
+      border-radius: var(--radius-pill);
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--purple-dark);
+    }
+
+    .add-photos-cta {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1.5px dashed var(--purple-soft);
+      border-radius: var(--radius-md);
+      text-align: center;
+      color: var(--purple-main);
+      font-size: 13px;
+    }
+
+    /* ===========================
+       AVIS CLIENTS
+    =========================== */
+    .avis { background: white; }
+
+    .avis-scroll {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+      margin: 0 -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .avis-scroll::-webkit-scrollbar { display: none; }
+
+    .avis-card {
+      flex-shrink: 0;
+      width: 260px;
+      background: var(--lavender-light);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+    .avis-stars { color: #f59e0b; font-size: 14px; margin-bottom: 10px; letter-spacing: 2px; }
+    .avis-text { font-size: 13px; color: #4a3a6a; line-height: 1.55; margin-bottom: 12px; font-style: italic; }
+    .avis-author { display: flex; align-items: center; gap: 10px; }
+    .avis-avatar {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--purple-muted);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+    }
+    .avis-name { font-weight: 500; font-size: 13px; color: var(--purple-dark); }
+    .avis-date { font-size: 11px; color: #9a8ab0; }
+
+    .google-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding: 14px;
+      border: 1.5px solid var(--purple-muted);
+      border-radius: var(--radius-pill);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--purple-dark);
+      background: white;
+      transition: background 0.15s;
+    }
+    .google-cta:active { background: var(--lavender-light); }
+
+    /* ===========================
+       POURQUOI ICONIC FACE
+    =========================== */
+    .why { background: linear-gradient(160deg, var(--purple-dark) 0%, #2a1a5e 100%); color: white; }
+    .why .section-title { color: white; }
+    .why .section-sub { color: #c4b4e8; }
+    .why .section-label { color: var(--purple-soft); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .why-item {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-md);
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .why-icon { font-size: 28px; margin-bottom: 10px; }
+    .why-title { font-weight: 500; font-size: 14px; color: white; margin-bottom: 4px; }
+    .why-desc { font-size: 12px; color: #b4a0d8; line-height: 1.4; }
+
+    /* ===========================
+       CONTACT SECTION
+    =========================== */
+    .contact { background: white; text-align: center; }
+    .contact-card {
+      background: linear-gradient(135deg, var(--purple-main), var(--purple-dark));
+      border-radius: var(--radius-lg);
+      padding: 36px 24px;
+      color: white;
+    }
+    .contact-card h2 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    .contact-card p { font-size: 14px; color: rgba(255,255,255,0.8); margin-bottom: 28px; }
+
+    .btn-wa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #25D366;
+      color: white;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 16px;
+      padding: 18px 28px;
+      border-radius: var(--radius-pill);
+      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.35);
+      transition: transform 0.15s;
+      margin-bottom: 14px;
+    }
+    .btn-wa:active { transform: scale(0.97); }
+
+    .contact-or {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      margin: 10px 0;
+    }
+
+    .btn-insta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1.5px solid rgba(255,255,255,0.3);
+      color: white;
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 15px;
+      padding: 14px 24px;
+      border-radius: var(--radius-pill);
+      transition: background 0.15s;
+    }
+    .btn-insta:active { background: rgba(255,255,255,0.25); }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+    footer {
+      background: var(--black);
+      color: #8a7aaa;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 12px;
+    }
+    footer strong { color: var(--purple-soft); }
+    footer a { color: var(--purple-soft); }
+
+    /* ===========================
+       ANIMATIONS
+    =========================== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body>
 
-<div class="topbar">
-  <span class="topbar-inner">
-    <span>Extensions de Cils · Lash Lift · Brow Lift · Paris & Île-de-France &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    <span>Extensions de Cils · Lash Lift · Brow Lift · Paris & Île-de-France &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-  </span>
-</div>
-
-<header id="hdr">
-  <nav>
-    <ul class="nav-left">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#avis">Avis</a></li>
-      <li><a href="#about">À propos</a></li>
-    </ul>
-    <a href="#" class="nav-logo">
-      <span class="nav-logo-name">ICONIC FACE</span>
-      <span class="nav-logo-sub">Paris</span>
-    </a>
-    <ul class="nav-right">
-      <li><a href="tel:+33767508332">07 67 50 83 32</a></li>
-      <li><a href="https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face-clone" target="_blank" rel="noopener" class="nav-book">Réserver</a></li>
-    </ul>
-    <button class="burger" id="burger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-</header>
-
-<div class="m-menu" id="mmenu">
-  <button class="m-close" id="mclose">✕</button>
-  <a href="#services">Services</a>
-  <a href="#avis">Avis</a>
-  <a href="#about">À propos</a>
-  <a href="tel:+33767508332">07 67 50 83 32</a>
-  <a href="https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face-clone" target="_blank" rel="noopener" class="m-book">Réserver</a>
-</div>
-
-<section class="hero">
-  <div class="hero-vid-wrap">
-    <video class="hero-bg" id="heroVid" autoplay muted loop playsinline>
-      <source src="images/hero_vid.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <span class="hero-eyebrow">Iconic Face · Paris</span>
-    <h1 class="hero-title">L'ARCHITECTURE<br>DU REGARD</h1>
-    <span class="hero-sub">Extensions de cils · Lash Lift · Brow Lift</span>
-    <a href="https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face-clone" target="_blank" rel="noopener" class="hero-cta">Prendre rendez-vous</a>
-  </div>
-</section>
-
-<div class="mq-wrap" aria-hidden="true">
-  <div class="mq-track">
-    <span class="mq-item">Extensions de Cils <span class="mq-dot">◆</span></span>
-    <span class="mq-item">Lash Lift <span class="mq-dot">◆</span></span>
-    <span class="mq-item">Brow Lift <span class="mq-dot">◆</span></span>
-    <span class="mq-item">Paris <span class="mq-dot">◆</span></span>
-    <span class="mq-item">Île-de-France <span class="mq-dot">◆</span></span>
-    <span class="mq-item">Sur-mesure <span class="mq-dot">◆</span></span>
-    <span class="mq-item">Diagnostic offert <span class="mq-dot">◆</span></span>
-    <span class="mq-item">Extensions de Cils <span class="mq-dot">◆</span></span>
-    <span class="mq-item">Lash Lift <span class="mq-dot">◆</span></span>
-    <span class="mq-item">Brow Lift <span class="mq-dot">◆</span></span>
-    <span class="mq-item">Paris <span class="mq-dot">◆</span></span>
-    <span class="mq-item">Île-de-France <span class="mq-dot">◆</span></span>
-    <span class="mq-item">Sur-mesure <span class="mq-dot">◆</span></span>
-    <span class="mq-item">Diagnostic offert <span class="mq-dot">◆</span></span>
-  </div>
-</div>
-
-<section id="services">
-  <div class="svc-grid">
-    <a href="extensions.html" class="svc-card reveal">
-      <div class="svc-img"><img src="/images/lash-brow-black.png" alt="Extensions de cils Paris — Iconic Face"></div>
-      <div class="svc-shade"></div>
-      <div class="svc-body">
-        <span class="svc-tag">Prestation phare</span>
-        <span class="svc-name">EXTENSIONS<br>DE CILS</span>
-        <span class="svc-link">Découvrir →</span>
-      </div>
-    </a>
-    <a href="lash-brow.html" class="svc-card reveal">
-      <div class="svc-img"><img src="/images/lash-kit-black.png" alt="Lash Lift et Brow Lift Paris — Iconic Face"></div>
-      <div class="svc-shade"></div>
-      <div class="svc-body">
-        <span class="svc-tag">Résultat naturel</span>
-        <span class="svc-name">LASH LIFT<br>&amp; BROW LIFT</span>
-        <span class="svc-link">Découvrir →</span>
-      </div>
-    </a>
-    <a href="https://wa.me/33767508332?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20Regard%20Apais%C3%A9%20%E2%9C%A8" target="_blank" rel="noopener" class="svc-card reveal">
-      <div class="svc-img"><img src="/images/lash-brow-black.png" alt="Massage du regard Iconic Face" style="object-position:top;"></div>
-      <div class="svc-shade"></div>
-      <div class="svc-body">
-        <span class="svc-tag">Soin exclusif</span>
-        <span class="svc-name">REGARD<br>APAISÉ</span>
-        <span class="svc-link" style="color:rgba(255,255,255,.75);">Réserver sur WhatsApp →</span>
-      </div>
-    </a>
-  </div>
-</section>
-
-<div class="gfiche-band reveal">
-  <div class="gfiche-left">
-    <div class="gfiche-stars">★★★★★</div>
-    <div class="gfiche-info">
-      <div class="gfiche-num">5.0</div>
-      <div class="gfiche-sub">sur Google</div>
-    </div>
-  </div>
-  <p class="gfiche-text">Découvrez nos avis clients et retrouvez toutes les informations pratiques sur notre fiche Google.</p>
-  <div class="gfiche-btns">
-    <a href="https://maps.app.goo.gl/Zr3xhcs8dTRj96fj6" target="_blank" rel="noopener" class="gfiche-btn">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#fff"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#fff"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#fff"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#fff"/></svg>
-      Notre fiche Google
-    </a>
-    <a href="https://share.google/kGYSKSPBKWj8OxEda" target="_blank" rel="noopener" class="gfiche-btn2">Laisser un avis →</a>
-  </div>
-</div>
-
-<section class="about" id="about">
-  <div class="about-left reveal">
-    <span class="about-eye">Notre vision</span>
-    <h2 class="about-title">SUBLIMER<br>CHAQUE<br>REGARD</h2>
-    <p class="about-text">Chaque prestation est sur-mesure, adaptée à votre morphologie. Déplacement à domicile sur Paris et Île-de-France.</p>
-    <a href="https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face-clone" target="_blank" rel="noopener" class="about-btn">Prendre rendez-vous</a>
-  </div>
-  <div class="about-right">
-    <div class="stat reveal">
-      <span class="stat-n">150+</span>
-      <span class="stat-l">Clientes satisfaites</span>
-    </div>
-    <div class="stat reveal">
-      <span class="stat-n">100%</span>
-      <span class="stat-l">Sur-mesure</span>
-    </div>
-  </div>
-</section>
-
-<div class="google-band" id="avis">
-  <div class="g-left">
-    <div class="g-stars">★★★★★</div>
-    <div>
-      <span class="g-num">5.0</span>
-      <span class="g-sub">sur Google</span>
-    </div>
-  </div>
-  <p class="g-text">Partagez votre expérience et retrouvez toutes nos informations sur notre fiche Google.</p>
-  <div class="g-btns">
-    <a href="https://maps.app.goo.gl/Zr3xhcs8dTRj96fj6" target="_blank" rel="noopener" class="btn-g">
-      <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#fff"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#fff"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#fff"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#fff"/></svg>
-      Notre fiche Google
-    </a>
-    <a href="https://share.google/kGYSKSPBKWj8OxEda" target="_blank" rel="noopener" class="btn-g2">Laisser un avis →</a>
-  </div>
-</div>
-
-<section class="reviews">
-  <span class="sec-eye">Avis clientes</span>
-  <h2 class="sec-title">ELLES ONT<br>CHOISI ICONIC</h2>
-  <div class="reviews-grid">
-    <article class="rev reveal">
-      <div class="rev-stars">★★★★★</div>
-      <p class="rev-text">« Depuis mon lash lift chez Iconic Face, je me réveille avec un regard qui en impose. Résultat naturel, tenue parfaite. »</p>
-      <div class="rev-name">Inès L.</div>
-      <div class="rev-svc">Lash Lift · Paris 8e</div>
-    </article>
-    <article class="rev reveal">
-      <div class="rev-stars">★★★★★</div>
-      <p class="rev-text">« Pour la première fois on m'a proposé un effet adapté à mes yeux. Toutes mes invitées m'ont demandé ce que j'avais fait. »</p>
-      <div class="rev-name">Camille R.</div>
-      <div class="rev-svc">Extensions · Mariage</div>
-    </article>
-    <article class="rev reveal">
-      <div class="rev-stars">★★★★★</div>
-      <p class="rev-text">« Après le brow lift, mon visage est complètement différent — plus lumineux, plus structuré. Un résultat bluffant. »</p>
-      <div class="rev-name">Sofia M.</div>
-      <div class="rev-svc">Brow Lift · Paris 16e</div>
-    </article>
-  </div>
-</section>
-
-<!-- SECTION RÉSEAUX — sans formulaire -->
-<section class="nl">
-  <h2 class="nl-title">REJOIGNEZ<br>L'UNIVERS<br>ICONIC</h2>
-  <p class="nl-sub">Suivez-nous pour découvrir nos coulisses, conseils beauté et avant/après de nos prestations.</p>
-  <div class="nl-divider"></div>
-  <div class="nl-socials">
-    <a href="https://instagram.com/iconicface.fr" target="_blank" rel="noopener" class="nl-soc-link" aria-label="Instagram">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-        <rect x="2" y="2" width="20" height="20" rx="5.5" stroke="white" stroke-width="1.7"/>
-        <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.7"/>
-        <circle cx="17.5" cy="6.5" r="1.1" fill="white"/>
-      </svg>
-      <span>iconicface.fr</span>
-    </a>
-    <a href="https://tiktok.com/@iconicfaceinc" target="_blank" rel="noopener" class="nl-soc-link" aria-label="TikTok">
-      <svg width="24" height="26" viewBox="0 0 24 24" fill="white">
-        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.01-.05z"/>
-      </svg>
-      <span>@iconicfaceinc</span>
-    </a>
-    <a href="https://www.youtube.com/@iconicface.officiel" target="_blank" rel="noopener" class="nl-soc-link" aria-label="YouTube">
-      <svg width="28" height="26" viewBox="0 0 24 24" fill="white">
-        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
-        <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0a0a0a"/>
-      </svg>
-      <span>@iconicface.officiel</span>
-    </a>
-  </div>
-</section>
-
-<footer>
-  <div class="ft">
-    <div>
-      <span class="ft-logo">ICONIC FACE</span>
-      <p class="ft-desc">Spécialiste en architecture du regard à Paris et Île-de-France.</p>
-    </div>
-    <div>
-      <span class="ft-head">Prestations</span>
-      <ul>
-        <li><a href="extensions.html">Extensions de Cils</a></li>
-        <li><a href="lash-brow.html">Lash Lift</a></li>
-        <li><a href="lash-brow.html">Brow Lift</a></li>
-      </ul>
-    </div>
-    <div>
-      <span class="ft-head">Suivez-nous</span>
-      <div class="ft-soc-icons">
-        <a href="https://instagram.com/iconicface.fr" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-        </a>
-        <a href="https://tiktok.com/@iconicfaceinc" target="_blank" rel="noopener" aria-label="TikTok">
-          <svg width="18" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.01-.05z"/></svg>
-        </a>
-        <a href="https://www.youtube.com/@iconicface.officiel" target="_blank" rel="noopener" aria-label="YouTube">
-          <svg width="22" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#f4f2ef"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="ft-bot">
-    <p class="ft-copy">© 2025 Iconic Face — Tous droits réservés</p>
-    <div class="ft-soc">
-      <a href="https://instagram.com/iconicface.fr" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://tiktok.com/@iconicfaceinc" target="_blank" rel="noopener">TikTok</a>
-      <a href="https://www.youtube.com/@iconicface.officiel" target="_blank" rel="noopener">YouTube</a>
-      <a href="/cdn-cgi/l/email-protection#29404a4647404a4f484a4c40474a694e44484045074a4644">Contact</a>
-    </div>
-  </div>
-</footer>
-
-<div class="wordmark" aria-hidden="true">
-  <span>ICONIC FACE</span>
-</div>
-
-<a href="https://wa.me/33767508332?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20%E2%9C%A8" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-  WhatsApp
+<!-- STICKY WHATSAPP -->
+<a href="https://wa.me/33767508332" class="wa-sticky" target="_blank" rel="noopener">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  Prendre RDV
 </a>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Vidéo mobile
-  const heroVid = document.getElementById('heroVid');
-  if (heroVid && window.innerWidth <= 720) {
-    heroVid.querySelector('source').src = 'images/hero_vid_mobile.mp4';
-    heroVid.load();
-  }
-  // Scroll shadow
-  const hdr = document.getElementById('hdr');
-  window.addEventListener('scroll', () => {
-    hdr.style.boxShadow = window.scrollY > 30 ? '0 2px 20px rgba(0,0,0,.08)' : 'none';
-  });
-  // Reveal animations
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-  // Menu mobile
-  const burger = document.getElementById('burger');
-  const mmenu  = document.getElementById('mmenu');
-  const mclose = document.getElementById('mclose');
-  const close  = () => { mmenu.classList.remove('open'); document.body.style.overflow=''; };
-  burger.addEventListener('click', () => { mmenu.classList.add('open'); document.body.style.overflow='hidden'; });
-  mclose.addEventListener('click', close);
-  mmenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      close();
-      const href = a.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        setTimeout(() => {
-          document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-        }, 300);
+<div class="page">
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <!-- Logo: remplace images/logo.png avec ton fichier -->
+    <img src="images/logo.png" alt="Iconic Face" class="hero-logo" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block'">
+    <!-- Fallback SVG si logo absent -->
+    <div id="logo-fallback" style="display:none" class="hero-logo-fallback">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#b49de0" stroke="#7c5cbf" stroke-width="3"/>
+        <text x="50" y="66" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="44" font-weight="700" fill="#4a2d8a">if</text>
+      </svg>
+    </div>
+
+    <div class="hero-badge">✨ Spécialiste cils & sourcils</div>
+
+    <h1>Des regards qui<br><em>parlent d'eux-mêmes</em></h1>
+    <p class="hero-sub">Extensions, lash lift, brow lift — résultats naturels et durables</p>
+
+    <div class="hero-ctas">
+      <a href="https://wa.me/33767508332" class="btn-primary" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Réserver sur WhatsApp
+      </a>
+      <a href="#prestations" class="btn-secondary">
+        Voir nos tarifs →
+      </a>
+    </div>
+  </header>
+
+  <!-- Trust strip -->
+  <div class="trust-strip fade-in">
+    <div class="trust-item">
+      <span class="trust-num">100%</span>
+      <span class="trust-label">Personnalisé</span>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <span class="trust-num">⭐ 5</span>
+      <span class="trust-label">Avis clients</span>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <span class="trust-num">Paris</span>
+      <span class="trust-label">Île-de-France</span>
+    </div>
+  </div>
+
+  <!-- ===== PRESTATIONS ===== -->
+  <section class="prestations fade-in" id="prestations">
+    <div class="section-label">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Nos prestations
+    </div>
+    <h2 class="section-title">Nos tarifs</h2>
+    <p class="section-sub">à partir de — tarif final selon volume & état</p>
+
+    <!-- 
+      =====================================================
+      ICÔNES DES PRESTATIONS — COMMENT AJOUTER TES IMAGES
+      =====================================================
+      Remplace l'emoji dans .prestation-icon par :
+      <img src="images/icones/extensions-classique.png" alt="Extensions classique">
+      
+      Format recommandé : PNG fond transparent, 200x200px
+      Dossier : images/icones/
+      =====================================================
+    -->
+
+    <!-- Extensions classique -->
+    <div class="prestation-card">
+      <div class="prestation-icon">
+        <!-- Remplace par : <img src="images/icones/extensions-classique.png" alt=""> -->
+        🪶
+      </div>
+      <div class="prestation-info">
+        <div class="prestation-name">Extensions classique</div>
+        <div class="prestation-desc">Effet naturel & léger</div>
+      </div>
+      <div class="prestation-price">35€<span>à partir de</span></div>
+    </div>
+
+    <!-- Extensions mixte -->
+    <div class="prestation-card">
+      <div class="prestation-icon">
+        <!-- Remplace par : <img src="images/icones/extensions-mixte.png" alt=""> -->
+        👁️
+      </div>
+      <div class="prestation-info">
+        <div class="prestation-name">Extensions mixte</div>
+        <div class="prestation-desc">Volume subtil & défini</div>
+      </div>
+      <div class="prestation-price">41€<span>à partir de</span></div>
+    </div>
+
+    <!-- Volume russe -->
+    <div class="prestation-card">
+      <div class="prestation-icon">
+        <!-- Remplace par : <img src="images/icones/volume-russe.png" alt=""> -->
+        ✨
+      </div>
+      <div class="prestation-info">
+        <div class="prestation-name">Volume russe</div>
+        <div class="prestation-desc">Regard intense & glamour</div>
+      </div>
+      <div class="prestation-price">49€<span>à partir de</span></div>
+    </div>
+
+    <!-- Lash lift -->
+    <div class="prestation-card">
+      <div class="prestation-icon">
+        <!-- Remplace par : <img src="images/icones/lash-lift.png" alt=""> -->
+        🌙
+      </div>
+      <div class="prestation-info">
+        <div class="prestation-name">Lash lift + teinture</div>
+        <div class="prestation-desc">Courbe parfaite & longue durée</div>
+      </div>
+      <div class="prestation-price">29€<span>à partir de</span></div>
+    </div>
+
+    <!-- Brow lift -->
+    <div class="prestation-card">
+      <div class="prestation-icon">
+        <!-- Remplace par : <img src="images/icones/brow-lift.png" alt=""> -->
+        🦋
+      </div>
+      <div class="prestation-info">
+        <div class="prestation-name">Brow lift</div>
+        <div class="prestation-desc">Sourcils restructurés</div>
+      </div>
+      <div class="prestation-price">55€<span>à partir de</span></div>
+    </div>
+
+    <!-- Brow lift + teinture -->
+    <div class="prestation-card">
+      <div class="prestation-icon">
+        <!-- Remplace par : <img src="images/icones/brow-lift-teinture.png" alt=""> -->
+        🐰
+      </div>
+      <div class="prestation-info">
+        <div class="prestation-name">Brow lift + teinture</div>
+        <div class="prestation-desc">Sourcils redessinés & colorés</div>
+      </div>
+      <div class="prestation-price">70€<span>à partir de</span></div>
+    </div>
+
+    <a href="https://wa.me/33767508332?text=Bonjour%20Iconic%20Face%2C%20je%20souhaite%20prendre%20rendez-vous%20%F0%9F%8C%B8" class="btn-primary cta-rdv-inline" target="_blank" rel="noopener">
+      Réserver maintenant →
+    </a>
+  </section>
+
+  <!-- ===== GALERIE RÉSULTATS ===== -->
+  <section class="galerie fade-in" id="resultats">
+    <div class="section-label">📸 Avant / Après</div>
+    <h2 class="section-title">Résultats réels</h2>
+    <p class="section-sub">Photos de nos clientes — non retouchées</p>
+
+    <div class="results-grid">
+      <!-- 
+        POUR AJOUTER DES PHOTOS :
+        Remplace les blocs .result-card-placeholder par :
+        <img src="images/resultats/photo1.jpg" alt="Extensions cils avant après">
+        
+        Et ajoute le tag correspondant (ex: "Volume russe")
+      -->
+      <div class="result-card">
+        <div class="result-card-placeholder">
+          <span class="icon">🌸</span>
+          Photo résultat<br>à venir
+        </div>
+        <div class="result-tag">Extensions</div>
+      </div>
+      <div class="result-card">
+        <div class="result-card-placeholder">
+          <span class="icon">✨</span>
+          Photo résultat<br>à venir
+        </div>
+        <div class="result-tag">Volume russe</div>
+      </div>
+      <div class="result-card">
+        <div class="result-card-placeholder">
+          <span class="icon">🌙</span>
+          Photo résultat<br>à venir
+        </div>
+        <div class="result-tag">Lash lift</div>
+      </div>
+      <div class="result-card">
+        <div class="result-card-placeholder">
+          <span class="icon">🦋</span>
+          Photo résultat<br>à venir
+        </div>
+        <div class="result-tag">Brow lift</div>
+      </div>
+    </div>
+
+    <!-- Ce bloc s'enlève une fois les vraies photos ajoutées -->
+    <div class="add-photos-cta">
+      📩 Pour ajouter vos photos : déposez-les dans <strong>images/resultats/</strong><br>et remplacez les placeholders dans le HTML
+    </div>
+  </section>
+
+  <!-- ===== AVIS CLIENTS ===== -->
+  <section class="avis fade-in" id="avis">
+    <div class="section-label">⭐ Témoignages</div>
+    <h2 class="section-title">Ce qu'elles disent</h2>
+    <p class="section-sub">Avis Google vérifiés</p>
+
+    <div class="avis-scroll">
+      <!-- Ajouter / modifier les avis ici -->
+      <div class="avis-card">
+        <div class="avis-stars">★★★★★</div>
+        <p class="avis-text">"Résultat absolument parfait. Rose est très professionnelle, à l'écoute. Mes cils n'ont jamais été aussi beaux !"</p>
+        <div class="avis-author">
+          <div class="avis-avatar">👩</div>
+          <div>
+            <div class="avis-name">Sophie M.</div>
+            <div class="avis-date">Avis Google · il y a 2 semaines</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="avis-card">
+        <div class="avis-stars">★★★★★</div>
+        <p class="avis-text">"Volume russe impeccable, tient plus de 3 semaines. Je recommande à 100% à toutes mes amies !"</p>
+        <div class="avis-author">
+          <div class="avis-avatar">💜</div>
+          <div>
+            <div class="avis-name">Camille R.</div>
+            <div class="avis-date">Avis Google · il y a 1 mois</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="avis-card">
+        <div class="avis-stars">★★★★★</div>
+        <p class="avis-text">"Le brow lift a tout changé, je n'avais jamais réalisé à quel point mes sourcils manquaient de définition. Merci !"</p>
+        <div class="avis-author">
+          <div class="avis-avatar">🌸</div>
+          <div>
+            <div class="avis-name">Léa B.</div>
+            <div class="avis-date">Avis Google · il y a 3 semaines</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ajouter d'autres avis en copiant un bloc .avis-card -->
+    </div>
+
+    <a href="https://g.page/r/VOTRE_ID_GOOGLE_MAPS/review" class="google-cta" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+      Laisser un avis Google ✨
+    </a>
+  </section>
+
+  <!-- ===== POURQUOI ICONIC FACE ===== -->
+  <section class="why fade-in">
+    <div class="section-label">💜 Notre promesse</div>
+    <h2 class="section-title">Pourquoi nous choisir</h2>
+    <p class="section-sub">Iconic Face, c'est plus qu'une prestation</p>
+
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon">🎯</div>
+        <div class="why-title">Sur-mesure</div>
+        <div class="why-desc">Adapté à votre morphologie & vos envies</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">🌿</div>
+        <div class="why-title">Produits premium</div>
+        <div class="why-desc">Matériaux certifiés, sans irritants</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">⏱️</div>
+        <div class="why-title">Réponse rapide</div>
+        <div class="why-desc">RDV confirmé en moins d'1h sur WhatsApp</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">💜</div>
+        <div class="why-title">Suivi client</div>
+        <div class="why-desc">Conseils entretien & retouches disponibles</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / CTA FINAL ===== -->
+  <section class="contact fade-in" id="contact">
+    <div class="contact-card">
+      <h2>Prête pour votre transformation ?</h2>
+      <p>Répondez en quelques secondes — nous confirmons votre RDV rapidement 💌</p>
+
+      <a href="https://wa.me/33767508332?text=Bonjour%20Iconic%20Face%2C%20je%20souhaite%20prendre%20rendez-vous%20%F0%9F%8C%B8" class="btn-wa" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Écrire sur WhatsApp
+      </a>
+
+      <div class="contact-or">ou</div>
+
+      <a href="https://instagram.com/iconic.face" class="btn-insta" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Nous suivre sur Instagram
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <strong>Iconic Face</strong> · Île-de-France<br>
+    <a href="https://wa.me/33767508332">07 67 50 83 32</a> · Réponse sous 1h<br>
+    <br>
+    © 2026 Iconic Face · Tous droits réservés
+  </footer>
+
+</div><!-- .page -->
+
+<script>
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
       }
     });
-  });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
+
 </body>
 </html>
