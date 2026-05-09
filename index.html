@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iconic Face · Extensions Cils & Sourcils Paris</title>
-  <meta name="description" content="Spécialiste extensions de cils, lash lift, brow lift à Paris. Réservation rapide, résultats naturels et durables." />
-  
-  <!-- 
-    FAVICON : remplace images/favicon.png par ton image (PNG carré recommandé, 64x64px ou 512x512px)
-    Si tu n'as pas de PNG, le SVG de secours est utilisé automatiquement.
-  -->
-  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <title>Iconic Face · Extensions Cils & Sourcils La Rochelle</title>
+  <meta name="description" content="Spécialiste extensions de cils, lash lift, brow lift à La Rochelle. Résultats naturels et durables, déplacement à domicile. Réservation rapide sur WhatsApp." />
+  <meta name="keywords" content="extensions cils La Rochelle, lash lift La Rochelle, brow lift La Rochelle, pose cils La Rochelle, esthéticienne La Rochelle, volume russe La Rochelle" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Iconic Face · Cils & Sourcils à La Rochelle" />
+  <meta property="og:description" content="Extensions de cils, lash lift et brow lift à La Rochelle. Résultats naturels, produits premium, RDV en moins d'1h." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://iconicface.fr" />
+
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <link rel="apple-touch-icon" href="images/favicon.png" />
 
@@ -34,6 +36,8 @@
       --white: #fdfcff;
       --pink-accent: #e8a0bf;
       --gold: #c9a96e;
+      --ocean: #5b9ec9;
+      --ocean-light: #d4eaf7;
 
       --font-display: 'Playfair Display', Georgia, serif;
       --font-body: 'DM Sans', sans-serif;
@@ -48,9 +52,6 @@
       --shadow-btn: 0 4px 20px rgba(124, 92, 191, 0.35);
     }
 
-    /* ===========================
-       RESET & BASE
-    =========================== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
     body {
@@ -63,9 +64,7 @@
     img { display: block; max-width: 100%; }
     a { text-decoration: none; color: inherit; }
 
-    /* ===========================
-       NOISE TEXTURE OVERLAY
-    =========================== */
+    /* Noise texture */
     body::before {
       content: '';
       position: fixed;
@@ -75,9 +74,6 @@
       z-index: 0;
     }
 
-    /* ===========================
-       LAYOUT WRAPPER
-    =========================== */
     .page { position: relative; z-index: 1; max-width: 480px; margin: 0 auto; }
 
     /* ===========================
@@ -110,15 +106,27 @@
     }
 
     /* ===========================
-       HEADER / HERO
+       HERO — La Rochelle edition
+       Subtle ocean gradient accent
     =========================== */
     .hero {
-      background: linear-gradient(160deg, #f5f2ff 0%, var(--lavender-bg) 60%, #ddd4f5 100%);
+      background: linear-gradient(160deg, #f5f2ff 0%, var(--lavender-bg) 50%, #d8eef8 100%);
       padding: 48px 24px 40px;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
+
+    /* Subtle wave decoration */
+    .hero-wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 48px;
+      opacity: 0.18;
+    }
+
     .hero::after {
       content: '';
       position: absolute;
@@ -144,14 +152,6 @@
       50% { transform: translateY(-6px); }
     }
 
-    /* Logo fallback (SVG inline) */
-    .hero-logo-fallback {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto 16px;
-      animation: float 4s ease-in-out infinite;
-    }
-
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -165,6 +165,23 @@
       padding: 6px 14px;
       border-radius: var(--radius-pill);
       margin-bottom: 16px;
+    }
+
+    /* Geo badge — La Rochelle */
+    .hero-location-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--ocean-light);
+      color: #2a5f80;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 12px;
+      border: 1px solid rgba(91,158,201,0.25);
     }
 
     .hero h1 {
@@ -269,6 +286,37 @@
     }
 
     /* ===========================
+       LOCAL HIGHLIGHT BANNER
+       Specific to La Rochelle
+    =========================== */
+    .local-banner {
+      margin: 24px 20px 0;
+      background: linear-gradient(135deg, var(--ocean-light), #e8f5fd);
+      border: 1px solid rgba(91,158,201,0.3);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .local-banner-icon {
+      font-size: 26px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .local-banner-text {
+      font-size: 13px;
+      color: #2a5060;
+      line-height: 1.5;
+    }
+    .local-banner-text strong {
+      display: block;
+      font-size: 14px;
+      color: #1a3a50;
+      margin-bottom: 3px;
+    }
+
+    /* ===========================
        SECTIONS SHARED
     =========================== */
     section { padding: 48px 20px; }
@@ -299,6 +347,19 @@
     }
 
     /* ===========================
+       FADE IN
+    =========================== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===========================
        PRESTATIONS (TARIFS)
     =========================== */
     .prestations { background: white; border-radius: var(--radius-lg) var(--radius-lg) 0 0; margin-top: 32px; }
@@ -312,7 +373,6 @@
       padding: 18px 20px;
       margin-bottom: 12px;
       transition: transform 0.15s, box-shadow 0.15s;
-      cursor: default;
     }
     .prestation-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-card); }
 
@@ -327,13 +387,6 @@
       font-size: 22px;
       flex-shrink: 0;
       overflow: hidden;
-    }
-    /* Quand l'icône est une image */
-    .prestation-icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: var(--radius-sm);
     }
     .prestation-info { flex: 1; }
     .prestation-name {
@@ -368,6 +421,61 @@
     }
 
     /* ===========================
+       DÉPLACEMENT À DOMICILE
+       New section for La Rochelle
+    =========================== */
+    .domicile-section {
+      background: linear-gradient(160deg, #f8f4ff 0%, var(--lavender-light) 100%);
+      border-top: 1px solid var(--purple-muted);
+    }
+
+    .domicile-card {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 12px;
+      border: 1px solid var(--purple-muted);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .domicile-card-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    .domicile-card-text {
+      font-size: 14px;
+      color: #4a3a6a;
+      line-height: 1.5;
+    }
+    .domicile-card-text strong {
+      display: block;
+      font-size: 15px;
+      color: var(--purple-dark);
+      margin-bottom: 2px;
+    }
+
+    .zones-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .zone-tag {
+      background: var(--lavender-light);
+      border: 1px solid var(--purple-muted);
+      border-radius: var(--radius-pill);
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--purple-dark);
+    }
+    .zone-tag.active {
+      background: var(--purple-muted);
+      border-color: var(--purple-soft);
+    }
+
+    /* ===========================
        GALERIE RÉSULTATS
     =========================== */
     .galerie { background: var(--lavender-bg); }
@@ -389,20 +497,6 @@
       height: 100%;
       object-fit: cover;
     }
-    .result-card-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      color: var(--purple-main);
-      font-size: 12px;
-      text-align: center;
-      padding: 12px;
-    }
-    .result-card-placeholder .icon { font-size: 28px; opacity: 0.5; }
     .result-tag {
       position: absolute;
       bottom: 8px;
@@ -414,16 +508,6 @@
       font-size: 11px;
       font-weight: 500;
       color: var(--purple-dark);
-    }
-
-    .add-photos-cta {
-      margin-top: 20px;
-      padding: 20px;
-      border: 1.5px dashed var(--purple-soft);
-      border-radius: var(--radius-md);
-      text-align: center;
-      color: var(--purple-main);
-      font-size: 13px;
     }
 
     /* ===========================
@@ -498,29 +582,49 @@
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: var(--radius-md);
-      padding: 20px 16px;
-      text-align: center;
+      padding: 18px 14px;
     }
-    .why-icon { font-size: 28px; margin-bottom: 10px; }
-    .why-title { font-weight: 500; font-size: 14px; color: white; margin-bottom: 4px; }
-    .why-desc { font-size: 12px; color: #b4a0d8; line-height: 1.4; }
+    .why-icon { font-size: 26px; margin-bottom: 8px; }
+    .why-title { font-weight: 500; font-size: 14px; margin-bottom: 4px; }
+    .why-desc { font-size: 12px; color: #c4b4e8; line-height: 1.4; }
 
     /* ===========================
-       CONTACT SECTION
+       CONTACT / CTA FINAL
     =========================== */
-    .contact { background: white; text-align: center; }
+    .contact { background: var(--lavender-bg); padding-bottom: 80px; }
+
     .contact-card {
-      background: linear-gradient(135deg, var(--purple-main), var(--purple-dark));
+      background: linear-gradient(135deg, var(--purple-dark), #2a1a5e);
       border-radius: var(--radius-lg);
       padding: 36px 24px;
+      text-align: center;
       color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-card::before {
+      content: '🌊';
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      font-size: 80px;
+      opacity: 0.06;
+      pointer-events: none;
     }
     .contact-card h2 {
       font-family: var(--font-display);
-      font-size: 26px;
+      font-size: 24px;
+      font-weight: 700;
       margin-bottom: 10px;
     }
-    .contact-card p { font-size: 14px; color: rgba(255,255,255,0.8); margin-bottom: 28px; }
+    .contact-card p {
+      font-size: 14px;
+      color: #c4b4e8;
+      margin-bottom: 28px;
+      font-weight: 300;
+    }
+
+    .contact-btns { display: flex; flex-direction: column; gap: 12px; }
 
     .btn-wa {
       display: flex;
@@ -529,399 +633,237 @@
       gap: 10px;
       background: #25D366;
       color: white;
-      font-family: var(--font-body);
-      font-weight: 600;
+      font-weight: 500;
       font-size: 16px;
-      padding: 18px 28px;
+      padding: 16px 24px;
       border-radius: var(--radius-pill);
-      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.35);
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
       transition: transform 0.15s;
-      margin-bottom: 14px;
     }
     .btn-wa:active { transform: scale(0.97); }
 
     .contact-or {
       font-size: 12px;
-      color: rgba(255,255,255,0.5);
-      margin: 10px 0;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
     }
 
     .btn-insta {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      background: rgba(255,255,255,0.15);
-      border: 1.5px solid rgba(255,255,255,0.3);
+      gap: 10px;
+      background: linear-gradient(135deg, #833ab4, #fd1d1d, #f77737);
       color: white;
-      font-family: var(--font-body);
       font-weight: 500;
       font-size: 15px;
       padding: 14px 24px;
       border-radius: var(--radius-pill);
-      transition: background 0.15s;
+      transition: transform 0.15s;
     }
-    .btn-insta:active { background: rgba(255,255,255,0.25); }
+    .btn-insta:active { transform: scale(0.97); }
 
     /* ===========================
        FOOTER
     =========================== */
     footer {
-      background: var(--black);
-      color: #8a7aaa;
       text-align: center;
-      padding: 28px 20px;
+      padding: 32px 24px 40px;
       font-size: 12px;
+      color: #8a7aaa;
+      line-height: 1.8;
+      background: var(--lavender-bg);
     }
-    footer strong { color: var(--purple-soft); }
-    footer a { color: var(--purple-soft); }
-
-    /* ===========================
-       ANIMATIONS
-    =========================== */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ===========================
-       RESPONSIVE — TABLETTE (≥ 640px)
-    =========================== */
-    @media (min-width: 640px) {
-      .page { max-width: 720px; }
-
-      /* Hero */
-      .hero { padding: 64px 48px 56px; }
-      .hero-logo, .hero-logo-fallback { width: 130px; height: 130px; }
-      .hero h1 { font-size: 42px; }
-      .hero-sub { font-size: 17px; }
-      .hero-ctas {
-        flex-direction: row;
-        justify-content: center;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .btn-primary, .btn-secondary { flex: 1; }
-
-      /* Trust */
-      .trust-strip { gap: 48px; padding: 36px 48px 0; }
-      .trust-num { font-size: 32px; }
-
-      /* Sections */
-      section { padding: 64px 48px; }
-      .section-title { font-size: 32px; }
-
-      /* Prestations : 2 colonnes */
-      .prestations-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-      }
-      .prestations-grid .prestation-card { margin-bottom: 0; }
-      .cta-rdv-inline { grid-column: 1 / -1; }
-
-      /* Galerie : 3 colonnes */
-      .results-grid { grid-template-columns: 1fr 1fr 1fr; }
-
-      /* Avis : grille au lieu du scroll horizontal */
-      .avis-scroll {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        overflow-x: visible;
-        margin: 0;
-        padding: 0;
-      }
-      .avis-card { width: auto; flex-shrink: unset; }
-
-      /* Pourquoi : 4 colonnes */
-      .why-grid { grid-template-columns: repeat(4, 1fr); }
-
-      /* Contact */
-      .contact-card { padding: 52px 48px; }
-      .contact-card h2 { font-size: 34px; }
-      .contact-btns {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 16px;
-      }
-      .btn-wa { flex: 1; margin-bottom: 0; }
-      .contact-or { display: none; }
-      .btn-insta { flex: 1; }
-
-      /* WhatsApp sticky */
-      .wa-sticky { bottom: 32px; right: 32px; }
-    }
-
-    /* ===========================
-       RESPONSIVE — DESKTOP (≥ 1024px)
-    =========================== */
-    @media (min-width: 1024px) {
-      body { background: var(--lavender-bg); }
-
-      /* Wrapper centré avec max-width généreux */
-      .page { max-width: 1100px; }
-
-      /* Hero full-width avec layout 2 colonnes */
-      .hero {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        text-align: left;
-        padding: 80px 80px 80px;
-        gap: 48px;
-        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-      }
-      .hero::after { display: none; }
-      .hero-left { order: 1; }
-      .hero-logo, .hero-logo-fallback {
-        width: 220px;
-        height: 220px;
-        margin: 0 auto;
-        order: 2;
-      }
-      .hero-badge { display: inline-flex; }
-      .hero h1 { font-size: 52px; text-align: left; }
-      .hero-sub { text-align: left; }
-      .hero-ctas {
-        flex-direction: column;
-        max-width: 380px;
-        margin-left: 0;
-        margin-right: 0;
-      }
-      .btn-primary, .btn-secondary { flex: unset; }
-
-      /* Trust */
-      .trust-strip { padding: 48px 80px 0; gap: 64px; justify-content: flex-start; }
-
-      /* Sections padding desktop */
-      section { padding: 80px 80px; }
-      .section-title { font-size: 36px; }
-
-      /* Prestations : toujours 2 colonnes mais cartes plus grandes */
-      .prestation-card { padding: 22px 24px; }
-      .prestation-name { font-size: 16px; }
-      .prestation-price { font-size: 22px; }
-
-      /* Galerie : 4 colonnes */
-      .results-grid { grid-template-columns: repeat(4, 1fr); gap: 14px; }
-
-      /* Avis : 3 colonnes */
-      .avis-scroll { grid-template-columns: repeat(3, 1fr); }
-
-      /* Footer */
-      footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 28px 80px;
-        text-align: left;
-      }
-      footer > * { margin: 0; }
-    }
-
-    /* ===========================
-       RESPONSIVE — LARGE DESKTOP (≥ 1400px)
-    =========================== */
-    @media (min-width: 1400px) {
-      .page { max-width: 1280px; }
-      .hero h1 { font-size: 60px; }
-      .hero { padding: 100px 120px; }
-      section { padding: 100px 120px; }
-      .trust-strip { padding: 60px 120px 0; }
-      footer { padding: 32px 120px; }
-      .hero-logo, .hero-logo-fallback { width: 280px; height: 280px; }
-    }
-
-    /* ===========================
-       HOVER STATES (souris uniquement)
-    =========================== */
-    @media (hover: hover) {
-      .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 28px rgba(124, 92, 191, 0.45);
-      }
-      .btn-secondary:hover {
-        background: var(--lavender-light);
-        transform: translateY(-1px);
-      }
-      .btn-wa:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 32px rgba(37, 211, 102, 0.45);
-      }
-      .google-cta:hover { background: var(--lavender-light); }
-      .wa-sticky:hover { transform: scale(1.04); }
-    }
+    footer a { color: var(--purple-main); }
+    footer strong { color: var(--purple-dark); }
   </style>
 </head>
 <body>
 
-<!-- STICKY WHATSAPP -->
-<a href="https://wa.me/33767508332" class="wa-sticky" target="_blank" rel="noopener">
+<!-- WhatsApp sticky -->
+<a href="https://wa.me/33767508332?text=Bonjour%20Iconic%20Face%2C%20je%20souhaite%20prendre%20rendez-vous%20%F0%9F%8C%B8" class="wa-sticky" target="_blank" rel="noopener">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-  Prendre RDV
+  Réserver un RDV
 </a>
 
 <div class="page">
 
   <!-- ===== HERO ===== -->
   <header class="hero">
-    <div class="hero-left">
-      <div class="hero-badge">✨ Spécialiste cils & sourcils</div>
-      <h1>Des regards qui<br><em>parlent d'eux-mêmes</em></h1>
-      <p class="hero-sub">Extensions, lash lift, brow lift — résultats naturels et durables</p>
-      <div class="hero-ctas">
-        <a href="https://wa.me/33767508332" class="btn-primary" target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          Réserver sur WhatsApp
-        </a>
-        <a href="#prestations" class="btn-secondary">
-          Voir nos tarifs →
-        </a>
-      </div>
+    <!-- Logo — remplace src par images/logo.png -->
+    <img src="images/logo.png" alt="Iconic Face logo" class="hero-logo"
+         onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block'">
+    <div id="logo-fallback" style="display:none; width:100px; height:100px; margin:0 auto 16px; animation:float 4s ease-in-out infinite;">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#d4c9f0"/>
+        <text x="50" y="66" font-size="46" text-anchor="middle">🐰</text>
+      </svg>
     </div>
 
-    <!-- Logo: remplace images/logo.png avec ton fichier -->
-    <img src="images/logo.png" alt="Iconic Face" class="hero-logo" onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block'">
-    <!-- Fallback SVG si logo absent -->
-    <div id="logo-fallback" style="display:none" class="hero-logo-fallback">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="48" fill="#b49de0" stroke="#7c5cbf" stroke-width="3"/>
-        <text x="50" y="66" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="44" font-weight="700" fill="#4a2d8a">if</text>
-      </svg>
+    <div class="hero-location-badge">
+      📍 La Rochelle &amp; environs
+    </div>
+
+    <div class="hero-badge">✨ Spécialiste cils &amp; sourcils</div>
+
+    <h1>Des cils qui brillent<br>sous le <em>soleil rochelais</em></h1>
+
+    <p class="hero-sub">
+      Extensions · Lash lift · Brow lift<br>
+      Déplacement à domicile à La Rochelle
+    </p>
+
+    <div class="hero-ctas">
+      <a href="https://wa.me/33767508332?text=Bonjour%20Iconic%20Face%2C%20je%20souhaite%20prendre%20rendez-vous%20%F0%9F%8C%B8" class="btn-primary" target="_blank" rel="noopener">
+        📲 Prendre rendez-vous
+      </a>
+      <a href="#prestations" class="btn-secondary">
+        Voir les prestations &amp; tarifs →
+      </a>
+    </div>
+
+    <!-- Indicateurs de confiance -->
+    <div class="trust-strip">
+      <div class="trust-item">
+        <div class="trust-num">100%</div>
+        <div class="trust-label">Produits<br>premium</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-num">≤ 1h</div>
+        <div class="trust-label">Réponse<br>WhatsApp</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-num">★ 5/5</div>
+        <div class="trust-label">Avis<br>Google</div>
+      </div>
     </div>
   </header>
 
-  <!-- Trust strip -->
-  <div class="trust-strip fade-in">
-    <div class="trust-item">
-      <span class="trust-num">100%</span>
-      <span class="trust-label">Personnalisé</span>
-    </div>
-    <div class="trust-divider"></div>
-    <div class="trust-item">
-      <span class="trust-num">⭐ 5</span>
-      <span class="trust-label">Avis clients</span>
-    </div>
-    <div class="trust-divider"></div>
-    <div class="trust-item">
-      <span class="trust-num">Paris</span>
-      <span class="trust-label">Île-de-France</span>
+  <!-- Local highlight banner -->
+  <div class="local-banner fade-in">
+    <div class="local-banner-icon">🏖️</div>
+    <div class="local-banner-text">
+      <strong>Nouvelle à La Rochelle !</strong>
+      Rose se déplace directement chez vous — Centre-ville, Les Minimes, Laleu, Tasdon et alentours. Finies les heures de transport, vivez votre séance beauté depuis chez vous.
     </div>
   </div>
 
   <!-- ===== PRESTATIONS ===== -->
   <section class="prestations fade-in" id="prestations">
-    <div class="section-label">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      Nos prestations
-    </div>
-    <h2 class="section-title">Nos tarifs</h2>
-    <p class="section-sub">à partir de — tarif final selon volume & état</p>
-
-    <!-- 
-      =====================================================
-      ICÔNES DES PRESTATIONS — COMMENT AJOUTER TES IMAGES
-      =====================================================
-      Remplace l'emoji dans .prestation-icon par :
-      <img src="images/icones/extensions-classique.png" alt="Extensions classique">
-      
-      Format recommandé : PNG fond transparent, 200x200px
-      Dossier : images/icones/
-      =====================================================
-    -->
+    <div class="section-label">💜 Nos soins</div>
+    <h2 class="section-title">Prestations &amp; tarifs</h2>
+    <p class="section-sub">Séances à domicile à La Rochelle</p>
 
     <div class="prestations-grid">
 
-    <!-- Extensions classique -->
-    <div class="prestation-card">
-      <div class="prestation-icon">
-        <!-- Remplace par : <img src="images/icones/extensions-classique.png" alt=""> -->
-        🪶
+      <div class="prestation-card">
+        <div class="prestation-icon">✨</div>
+        <div class="prestation-info">
+          <div class="prestation-name">Extensions cils — Classique</div>
+          <div class="prestation-desc">Regard allongé &amp; naturel</div>
+        </div>
+        <div class="prestation-price">80€<span>à partir de</span></div>
       </div>
-      <div class="prestation-info">
-        <div class="prestation-name">Extensions classique</div>
-        <div class="prestation-desc">Effet naturel & léger</div>
+
+      <div class="prestation-card">
+        <div class="prestation-icon">💫</div>
+        <div class="prestation-info">
+          <div class="prestation-name">Volume russe</div>
+          <div class="prestation-desc">Densité &amp; intensité maximale</div>
+        </div>
+        <div class="prestation-price">100€<span>à partir de</span></div>
       </div>
-      <div class="prestation-price">35€<span>à partir de</span></div>
+
+      <div class="prestation-card">
+        <div class="prestation-icon">🌊</div>
+        <div class="prestation-info">
+          <div class="prestation-name">Lash lift</div>
+          <div class="prestation-desc">Courbe naturelle durable</div>
+        </div>
+        <div class="prestation-price">60€<span>à partir de</span></div>
+      </div>
+
+      <div class="prestation-card">
+        <div class="prestation-icon">🌟</div>
+        <div class="prestation-info">
+          <div class="prestation-name">Lash lift + teinture</div>
+          <div class="prestation-desc">Cils courbés &amp; intensifiés</div>
+        </div>
+        <div class="prestation-price">75€<span>à partir de</span></div>
+      </div>
+
+      <div class="prestation-card">
+        <div class="prestation-icon">🦋</div>
+        <div class="prestation-info">
+          <div class="prestation-name">Brow lift</div>
+          <div class="prestation-desc">Sourcils restructurés</div>
+        </div>
+        <div class="prestation-price">55€<span>à partir de</span></div>
+      </div>
+
+      <div class="prestation-card">
+        <div class="prestation-icon">🐰</div>
+        <div class="prestation-info">
+          <div class="prestation-name">Brow lift + teinture</div>
+          <div class="prestation-desc">Sourcils redessinés &amp; colorés</div>
+        </div>
+        <div class="prestation-price">70€<span>à partir de</span></div>
+      </div>
+
+      <a href="https://wa.me/33767508332?text=Bonjour%20Iconic%20Face%2C%20je%20souhaite%20prendre%20rendez-vous%20%F0%9F%8C%B8" class="btn-primary cta-rdv-inline" target="_blank" rel="noopener">
+        Réserver maintenant →
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== DÉPLACEMENT À DOMICILE ===== -->
+  <section class="domicile-section fade-in" id="domicile">
+    <div class="section-label">🗺️ Zone d'intervention</div>
+    <h2 class="section-title">On vient chez vous</h2>
+    <p class="section-sub">La Rochelle &amp; ses quartiers</p>
+
+    <div class="domicile-card">
+      <div class="domicile-card-icon">🚗</div>
+      <div class="domicile-card-text">
+        <strong>Déplacement inclus</strong>
+        Rose se déplace directement à votre domicile. Pas de frais supplémentaires dans la zone couverte.
+      </div>
     </div>
 
-    <!-- Extensions mixte -->
-    <div class="prestation-card">
-      <div class="prestation-icon">
-        <!-- Remplace par : <img src="images/icones/extensions-mixte.png" alt=""> -->
-        👁️
+    <div class="domicile-card">
+      <div class="domicile-card-icon">⏰</div>
+      <div class="domicile-card-text">
+        <strong>Disponibilités flexibles</strong>
+        Soirs &amp; week-ends disponibles — adaptés à votre emploi du temps.
       </div>
-      <div class="prestation-info">
-        <div class="prestation-name">Extensions mixte</div>
-        <div class="prestation-desc">Volume subtil & défini</div>
-      </div>
-      <div class="prestation-price">41€<span>à partir de</span></div>
     </div>
 
-    <!-- Volume russe -->
-    <div class="prestation-card">
-      <div class="prestation-icon">
-        <!-- Remplace par : <img src="images/icones/volume-russe.png" alt=""> -->
-        ✨
+    <div class="domicile-card">
+      <div class="domicile-card-icon">🛋️</div>
+      <div class="domicile-card-text">
+        <strong>Confort chez soi</strong>
+        Installation complète apportée. Vous profitez de votre soin dans votre propre environnement.
       </div>
-      <div class="prestation-info">
-        <div class="prestation-name">Volume russe</div>
-        <div class="prestation-desc">Regard intense & glamour</div>
-      </div>
-      <div class="prestation-price">49€<span>à partir de</span></div>
     </div>
 
-    <!-- Lash lift -->
-    <div class="prestation-card">
-      <div class="prestation-icon">
-        <!-- Remplace par : <img src="images/icones/lash-lift.png" alt=""> -->
-        🌙
-      </div>
-      <div class="prestation-info">
-        <div class="prestation-name">Lash lift + teinture</div>
-        <div class="prestation-desc">Courbe parfaite & longue durée</div>
-      </div>
-      <div class="prestation-price">29€<span>à partir de</span></div>
+    <div class="zones-list">
+      <span class="zone-tag active">La Rochelle centre</span>
+      <span class="zone-tag active">Les Minimes</span>
+      <span class="zone-tag active">Laleu</span>
+      <span class="zone-tag active">Tasdon</span>
+      <span class="zone-tag active">Port-Neuf</span>
+      <span class="zone-tag">Périgny</span>
+      <span class="zone-tag">Aytré</span>
+      <span class="zone-tag">Lagord</span>
+      <span class="zone-tag">Puilboreau</span>
     </div>
 
-    <!-- Brow lift -->
-    <div class="prestation-card">
-      <div class="prestation-icon">
-        <!-- Remplace par : <img src="images/icones/brow-lift.png" alt=""> -->
-        🦋
-      </div>
-      <div class="prestation-info">
-        <div class="prestation-name">Brow lift</div>
-        <div class="prestation-desc">Sourcils restructurés</div>
-      </div>
-      <div class="prestation-price">55€<span>à partir de</span></div>
-    </div>
-
-    <!-- Brow lift + teinture -->
-    <div class="prestation-card">
-      <div class="prestation-icon">
-        <!-- Remplace par : <img src="images/icones/brow-lift-teinture.png" alt=""> -->
-        🐰
-      </div>
-      <div class="prestation-info">
-        <div class="prestation-name">Brow lift + teinture</div>
-        <div class="prestation-desc">Sourcils redessinés & colorés</div>
-      </div>
-      <div class="prestation-price">70€<span>à partir de</span></div>
-    </div>
-
-    <a href="https://wa.me/33767508332?text=Bonjour%20Iconic%20Face%2C%20je%20souhaite%20prendre%20rendez-vous%20%F0%9F%8C%B8" class="btn-primary cta-rdv-inline" target="_blank" rel="noopener">
-      Réserver maintenant →
-    </a>
-
-    </div><!-- .prestations-grid -->
+    <p style="font-size:12px; color:#9a8ab0; margin-top:14px;">
+      Vous êtes hors zone ? Écrivez-nous, on fera notre possible 💌
+    </p>
   </section>
 
   <!-- ===== GALERIE RÉSULTATS ===== -->
@@ -931,34 +873,19 @@
     <p class="section-sub">Photos de nos clientes — non retouchées</p>
 
     <div class="results-grid">
-      <!-- 
-        POUR AJOUTER DES PHOTOS :
-        Remplace les blocs .result-card-placeholder par :
-        <img src="images/resultats/photo1.jpg" alt="Extensions cils avant après">
-        
-        Et ajoute le tag correspondant (ex: "Volume russe")
-      -->
       <div class="result-card">
-        <img src="images/resultats/resultat-1.jpg" alt="Extensions cils resultat">
-        <div class="result-tag">
-        </div>
+        <img src="images/resultats/resultat-1.jpg" alt="Extensions cils résultat La Rochelle">
         <div class="result-tag">Extensions</div>
       </div>
       <div class="result-card">
-        <img src="images/resultats/resultat-2.jpg" alt="Volume Russe resultat">
-        <div class="result-tag">
-        </div>
+        <img src="images/resultats/resultat-2.jpg" alt="Volume Russe résultat La Rochelle">
         <div class="result-tag">Volume russe</div>
       </div>
       <div class="result-card">
-        <img src="images/resultats/resultat-3.jpg" alt="Lash Lift resultat">
-        <div class="result-tag">
-        </div>
+        <img src="images/resultats/resultat-3.jpg" alt="Lash Lift résultat La Rochelle">
         <div class="result-tag">Lash lift</div>
       </div>
     </div>
-
-
   </section>
 
   <!-- ===== AVIS CLIENTS ===== -->
@@ -968,7 +895,6 @@
     <p class="section-sub">Avis Google vérifiés</p>
 
     <div class="avis-scroll">
-      <!-- Ajouter / modifier les avis ici -->
       <div class="avis-card">
         <div class="avis-stars">★★★★★</div>
         <p class="avis-text">"Résultat absolument parfait. Rose est très professionnelle, à l'écoute. Mes cils n'ont jamais été aussi beaux !"</p>
@@ -1004,8 +930,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Ajouter d'autres avis en copiant un bloc .avis-card -->
     </div>
 
     <a href="https://share.google/12HZAzdlXFxyVYGcF" class="google-cta" target="_blank" rel="noopener">
@@ -1024,7 +948,7 @@
       <div class="why-item">
         <div class="why-icon">🎯</div>
         <div class="why-title">Sur-mesure</div>
-        <div class="why-desc">Adapté à votre morphologie & vos envies</div>
+        <div class="why-desc">Adapté à votre morphologie &amp; vos envies</div>
       </div>
       <div class="why-item">
         <div class="why-icon">🌿</div>
@@ -1032,14 +956,14 @@
         <div class="why-desc">Matériaux certifiés, sans irritants</div>
       </div>
       <div class="why-item">
-        <div class="why-icon">⏱️</div>
-        <div class="why-title">Réponse rapide</div>
-        <div class="why-desc">RDV confirmé en moins d'1h sur WhatsApp</div>
+        <div class="why-icon">🏠</div>
+        <div class="why-title">À domicile</div>
+        <div class="why-desc">Rose se déplace chez vous à La Rochelle</div>
       </div>
       <div class="why-item">
         <div class="why-icon">💜</div>
         <div class="why-title">Suivi client</div>
-        <div class="why-desc">Conseils entretien & retouches disponibles</div>
+        <div class="why-desc">Conseils entretien &amp; retouches disponibles</div>
       </div>
     </div>
   </section>
@@ -1048,7 +972,7 @@
   <section class="contact fade-in" id="contact">
     <div class="contact-card">
       <h2>Prête pour votre transformation ?</h2>
-      <p>Répondez en quelques secondes — nous confirmons votre RDV rapidement 💌</p>
+      <p>Écrivez-nous sur WhatsApp — RDV confirmé en moins d'1h 💌</p>
 
       <div class="contact-btns">
         <a href="https://wa.me/33767508332?text=Bonjour%20Iconic%20Face%2C%20je%20souhaite%20prendre%20rendez-vous%20%F0%9F%8C%B8" class="btn-wa" target="_blank" rel="noopener">
@@ -1068,8 +992,9 @@
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <strong>Iconic Face</strong> · Île-de-France<br>
+    <strong>Iconic Face</strong> · La Rochelle<br>
     <a href="https://wa.me/33767508332">07 67 50 83 32</a> · Réponse sous 1h<br>
+    Déplacement à domicile · La Rochelle &amp; environs<br>
     <br>
     © 2026 Iconic Face · Tous droits réservés
   </footer>
