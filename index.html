@@ -1,61 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TGNX7HHW');</script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Extensions de Cils & Lash Lift à La Rochelle | Iconic Face</title>
 <meta name="description" content="Pose d'extensions de cils, lash lift et brow lift à La Rochelle. À domicile ou en salon agréé. Résultats naturels et durables. Réservation en ligne immédiate.">
-<meta name="keywords" content="extensions cils La Rochelle, lash lift La Rochelle, brow lift La Rochelle, pose cils La Rochelle, esthéticienne La Rochelle, volume russe La Rochelle">
+<meta name="keywords" content="extensions cils La Rochelle, lash lift La Rochelle, brow lift La Rochelle, pose cils La Rochelle, esthéticienne La Rochelle, volume russe La Rochelle, rehaussement cils La Rochelle">
 <meta property="og:title" content="Extensions de Cils & Lash Lift à La Rochelle | Iconic Face">
 <meta property="og:description" content="Extensions de cils, lash lift et brow lift à La Rochelle. Résultats naturels, produits premium. Réservation en ligne immédiate.">
-<meta property="og:image" content="https://iconicface.fr/images/resultats/resultat-2.jpg">
 <meta property="og:url" content="https://iconicface.fr">
 <meta property="og:type" content="website">
-
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Fredoka:wght@400;500;600&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
 <style>
-/* ══════════════════════════════════════════
-   ICONIC FACE — MOBILE FIRST CSS
-   Base    = mobile  (320px+)
-   md      = tablet  (min-width: 640px)
-   lg      = desktop (min-width: 960px)
-   ══════════════════════════════════════════ */
+/* ══════════════════════════════════════
+   ICONIC FACE v3 — DA Kawaii-Luxe
+   Mobile-first · Baloo 2 / Fredoka / Nunito
+   ══════════════════════════════════════ */
 
-/* ── RESET ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
 :root {
-  --noir: #1A1620;
-  --gris: #5A5567;
-  --gris-clair: #9A95A8;
-  --fond: #FFFFFF;
-  --fond-creme: #FAF9F7;
-  --border: #E8E5EE;
-  --mauve: #7C5CBF;
-  --mauve-light: #EDE8F8;
+  --violet: #C7B8F7;
+  --violet-deep: #8A7BF4;
+  --rose: #FFD6F5;
+  --blanc: #F8F4FF;
+  --noir: #2D2D3A;
+  --gris: #6B6880;
+  --gris-light: #A9A6C0;
+  --border: #E8E0FF;
   --px: 20px;
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--fond);
+  font-family: 'Nunito', sans-serif;
+  background: var(--blanc);
   color: var(--noir);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -63,1145 +50,1111 @@ body {
 img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
 
-/* ── EYEBROW réutilisable ── */
-.eyebrow {
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gris-clair);
-  display: block;
-  margin-bottom: 14px;
+/* ══ BANDEAU DÉFILANT ══ */
+.ticker-wrap {
+  background: var(--violet-deep);
+  overflow: hidden;
+  padding: 9px 0;
+  white-space: nowrap;
 }
-
-/* ── BANDEAU TOP ── */
-.nav-top {
-  background: var(--noir);
+.ticker-track {
+  display: inline-flex;
+  animation: ticker 22s linear infinite;
+  gap: 0;
+}
+.ticker-track span {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
   color: #fff;
-  font-size: 11px;
-  text-align: center;
-  padding: 9px var(--px);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
+  padding: 0 24px;
+}
+.ticker-track span::after {
+  content: '✦';
+  margin-left: 24px;
+  opacity: 0.6;
+}
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* ── NAV ── */
+/* ══ NAV ══ */
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px var(--px);
-  border-bottom: 1px solid var(--border);
+  padding: 14px var(--px);
+  background: var(--blanc);
+  border-bottom: 1.5px solid var(--border);
   position: sticky;
   top: 0;
-  background: var(--fond);
   z-index: 200;
 }
-.nav-logo {
+.nav-brand {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--noir);
+  letter-spacing: -0.01em;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
-.nav-logo img {
-  height: 36px;
-  width: auto;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-}
-.nav-logo-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 19px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--noir);
-  line-height: 1;
-}
-.nav-logo-text em {
-  font-style: italic;
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: 0.01em;
-}
-/* liens nav cachés mobile → visibles desktop */
-.nav-links { display: none; list-style: none; }
-.nav-cta {
-  background: var(--noir);
+.nav-brand .dot { color: var(--violet-deep); }
+.nav-links { display: none; }
+.nav-cta-call {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--violet-deep);
   color: #fff;
-  padding: 10px 18px;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-family: 'DM Sans', sans-serif;
-  cursor: pointer;
+  padding: 10px 16px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
   border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  text-decoration: none;
   transition: background .2s;
-  white-space: nowrap;
 }
-.nav-cta:hover { background: var(--mauve); }
+.nav-cta-call:hover { background: var(--noir); }
+.nav-cta-call svg { flex-shrink: 0; }
 
-@media (min-width: 960px) {
-  nav { padding: 20px 60px; }
-  .nav-logo img { height: 44px; }
-  .nav-logo-text { font-size: 22px; }
+@media (min-width: 768px) {
+  nav { padding: 16px 40px; }
   .nav-links {
     display: flex;
-    gap: 36px;
+    list-style: none;
+    gap: 28px;
   }
   .nav-links a {
-    font-size: 12px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 15px;
     font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: var(--gris);
     transition: color .2s;
   }
-  .nav-links a:hover { color: var(--noir); }
+  .nav-links a:hover { color: var(--violet-deep); }
 }
 
-/* ── HERO ── */
+/* ══ HERO ══ */
 .hero {
   text-align: center;
-  padding: 48px var(--px) 40px;
-  border-bottom: 1px solid var(--border);
+  padding: 44px var(--px) 40px;
+  background: var(--blanc);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 220px; height: 220px;
+  background: var(--rose);
+  border-radius: 50%;
+  opacity: 0.35;
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; left: -40px;
+  width: 160px; height: 160px;
+  background: var(--violet);
+  border-radius: 50%;
+  opacity: 0.25;
+  pointer-events: none;
 }
 .hero-eyebrow {
-  font-size: 11px;
-  letter-spacing: 0.22em;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gris-clair);
-  margin-bottom: 18px;
+  color: var(--violet-deep);
+  display: block;
+  margin-bottom: 14px;
 }
 .hero h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 48px;
-  font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  color: var(--noir);
+  position: relative;
+  z-index: 1;
+}
+.hero h1 .accent { color: var(--violet-deep); }
+.hero-location {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gris-light);
   margin-bottom: 18px;
+  letter-spacing: -0.01em;
 }
-.hero h1 em { font-style: italic; font-weight: 400; }
 .hero-sub {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--gris);
-  margin: 0 auto 32px;
-  font-weight: 300;
-  max-width: 400px;
+  margin: 0 auto 28px;
+  max-width: 340px;
+  font-weight: 400;
+  line-height: 1.6;
 }
-
-/* KPIs : 2 colonnes mobile */
-.hero-kpis {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid var(--border);
-  margin: 0 auto 32px;
-  max-width: 480px;
+.hero-trust {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
 }
-.kpi {
-  padding: 16px 12px;
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  text-align: center;
+.trust-pill {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--noir);
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
-.kpi:nth-child(2n) { border-right: none; }
-.kpi:nth-last-child(-n+2) { border-bottom: none; }
-.kpi-val {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 24px;
-  font-weight: 600;
-  display: block;
-  line-height: 1;
-  margin-bottom: 5px;
-}
-.kpi-label {
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gris-clair);
-}
+.trust-pill .star { color: var(--violet-deep); }
 .hero-btns {
   display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
-
-@media (min-width: 640px) {
-  .hero { padding: 64px 40px 52px; }
-  .hero h1 { font-size: 60px; }
-  .hero-btns { flex-direction: row; justify-content: center; }
-  .hero-kpis { grid-template-columns: repeat(4,1fr); max-width: none; display: inline-grid; }
-  .kpi { border-bottom: none; }
-  .kpi:nth-child(2n) { border-right: 1px solid var(--border); }
-  .kpi:last-child { border-right: none; }
-}
-@media (min-width: 960px) {
-  .hero { padding: 80px 40px 64px; }
-  .hero h1 { font-size: 76px; }
-  .kpi { padding: 20px 36px; }
-  .kpi-val { font-size: 26px; }
-}
-
-/* ── BOUTONS ── */
-.btn-primary, .btn-secondary, .btn-rdv, .btn-etudiante, .btn-footer-primary, .btn-footer-secondary {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
+.btn-rdv-hero {
+  background: var(--violet-deep);
+  color: #fff;
+  padding: 17px 32px;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border: none;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: background .2s, border-color .2s, color .2s;
-}
-.btn-primary, .btn-footer-primary {
-  background: var(--noir);
-  color: #fff;
-  padding: 14px 28px;
-  border: 1px solid var(--noir);
-}
-.btn-primary:hover, .btn-footer-primary:hover { background: var(--mauve); border-color: var(--mauve); }
-.btn-secondary {
-  background: transparent;
-  color: var(--noir);
-  padding: 14px 28px;
-  border: 1px solid var(--border);
-}
-.btn-secondary:hover { border-color: var(--noir); }
-.btn-rdv {
-  background: var(--noir);
-  color: #fff;
-  padding: 13px 28px;
-  border: none;
-  align-self: flex-start;
-}
-.btn-rdv:hover { background: var(--mauve); }
-.btn-etudiante {
-  background: #fff;
-  color: var(--noir);
-  padding: 13px 28px;
-  border: none;
-}
-.btn-etudiante:hover { background: var(--mauve); color: #fff; }
-.btn-footer-secondary {
-  background: transparent;
-  color: rgba(255,255,255,.7);
-  padding: 14px 28px;
-  border: 1px solid rgba(255,255,255,.2);
-}
-.btn-footer-secondary:hover { border-color: rgba(255,255,255,.6); color: #fff; }
-
-/* ── TABS ── */
-.tabs {
-  display: flex;
-  border-bottom: 1px solid var(--border);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.tab {
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: var(--gris-clair);
-  text-decoration: none;
-  padding: 14px 18px;
-  border-bottom: 2px solid transparent;
-  white-space: nowrap;
-  transition: color .2s, border-color .2s;
-  flex-shrink: 0;
-}
-.tab:hover { color: var(--noir); }
-.tab.active { color: var(--noir); border-bottom-color: var(--noir); }
-
-/* ── SECTION INTRO ── */
-.section-intro {
-  text-align: center;
-  padding: 44px var(--px) 32px;
-}
-.section-intro h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 34px;
-  font-weight: 500;
-  font-style: italic;
-}
-.section-intro p { font-size: 13px; color: var(--gris); margin-top: 8px; }
-
-@media (min-width: 960px) {
-  .section-intro { padding: 64px 24px 48px; }
-  .section-intro h2 { font-size: 46px; }
-}
-
-/* ── PRESTATIONS ── */
-.prestations-wrap {
-  padding: 0 var(--px) 60px;
-}
-
-/* mobile : empilé */
-.prestation {
-  display: grid;
-  grid-template-columns: 1fr;
-  border-top: 1px solid var(--border);
-  padding: 36px 0;
-  gap: 28px;
-}
-.prestation:last-child { border-bottom: 1px solid var(--border); }
-
-.prestation-img {
-  overflow: hidden;
-  aspect-ratio: 4/3;
-  background: var(--mauve-light);
-}
-.prestation-img img {
+  border-radius: 100px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform .6s ease;
-}
-.prestation:hover .prestation-img img { transform: scale(1.04); }
-.prestation-img-fallback {
-  width: 100%;
-  height: 100%;
+  max-width: 320px;
+  transition: background .2s, transform .1s;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
 }
-.prestation-img-fallback .fi { font-size: 44px; opacity: .3; }
-.prestation-img-fallback .fl {
-  font-size: 11px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--mauve);
-  opacity: .6;
-}
-
-.prestation-body {
-  display: flex;
-  flex-direction: column;
-}
-.prestation-tag {
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gris-clair);
-  margin-bottom: 14px;
-}
-.prestation-body h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 1.05;
-  margin-bottom: 16px;
-}
-.prestation-body h3 em { font-style: italic; font-weight: 400; }
-.prestation-desc {
-  font-size: 14px;
-  line-height: 1.8;
-  color: var(--gris);
-  margin-bottom: 24px;
-  font-weight: 300;
-}
-
-/* tablet : side-by-side */
-@media (min-width: 640px) {
-  .prestation {
-    grid-template-columns: 240px 1fr;
-    gap: 32px;
-    padding: 48px 0;
-    align-items: start;
-  }
-  .prestation-img { aspect-ratio: 3/4; }
-  .prestation-body { padding-top: 4px; justify-content: flex-start; }
-}
-
-/* desktop : large */
-@media (min-width: 960px) {
-  .prestations-wrap { max-width: 960px; margin: 0 auto; padding: 0 48px 100px; }
-  .prestation {
-    grid-template-columns: 360px 1fr;
-    gap: 0;
-    padding: 64px 0;
-  }
-  .prestation-body { padding: 0 0 0 56px; justify-content: center; }
-  .prestation-body h3 { font-size: 38px; }
-}
-
-/* ── TARIF TABLE ── */
-.tarif-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 13px; }
-.tarif-table thead th {
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gris-clair);
-  font-weight: 500;
-  padding: 0 0 10px;
-  text-align: left;
-  border-bottom: 1px solid var(--border);
-}
-.tarif-table thead th:last-child { text-align: right; }
-.tarif-table tbody td {
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-  color: var(--gris);
-  vertical-align: middle;
-}
-.tarif-table tbody td:first-child { color: var(--noir); }
-.tarif-table tbody td:last-child {
-  text-align: right;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  font-weight: 600;
+.btn-rdv-hero:hover { background: var(--noir); transform: scale(1.01); }
+.btn-call-hero {
   color: var(--noir);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
 }
-.tarif-table .retouche td { color: var(--gris-clair); }
-.tarif-table .retouche td:last-child { font-size: 15px; color: var(--gris); }
+.btn-call-hero .num { color: var(--violet-deep); }
+.btn-call-hero svg { color: var(--violet-deep); }
 
-/* ── FORFAITS ── */
-.forfaits-wrap {
-  background: var(--fond-creme);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 48px var(--px);
+@media (min-width: 480px) {
+  .hero h1 { font-size: 58px; }
+  .hero-btns { flex-direction: row; justify-content: center; }
+  .btn-rdv-hero { width: auto; }
 }
-.forfaits-inner { max-width: 960px; margin: 0 auto; }
-.forfaits-header { margin-bottom: 28px; }
-.forfaits-header h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 34px;
+@media (min-width: 768px) {
+  .hero { padding: 64px 40px 56px; }
+  .hero h1 { font-size: 72px; }
+}
+
+/* ══ DÉCOS SVG ══ */
+.hero-decos {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.deco { position: absolute; opacity: 0.55; font-size: 22px; animation: float 4s ease-in-out infinite; }
+.deco:nth-child(1) { top: 12%; left: 8%; animation-delay: 0s; font-size: 18px; }
+.deco:nth-child(2) { top: 20%; right: 10%; animation-delay: .8s; }
+.deco:nth-child(3) { bottom: 25%; left: 12%; animation-delay: 1.4s; font-size: 16px; }
+.deco:nth-child(4) { bottom: 15%; right: 8%; animation-delay: 2s; font-size: 20px; }
+.deco:nth-child(5) { top: 55%; left: 4%; animation-delay: .4s; font-size: 14px; }
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(8deg); }
+}
+
+/* ══ PRESTATIONS ══ */
+.section-header {
+  text-align: center;
+  padding: 40px var(--px) 8px;
+}
+.section-eyebrow {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 12px;
   font-weight: 500;
-  margin-bottom: 6px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--violet-deep);
+  display: block;
+  margin-bottom: 8px;
 }
-.forfaits-header p { font-size: 14px; color: var(--gris); }
+.section-title {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--noir);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.section-sub {
+  font-size: 14px;
+  color: var(--gris);
+  margin-top: 8px;
+}
 
-/* 1 col mobile → 2 col tablet → 4 col desktop */
-.forfaits-grid {
+.prestations-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  margin-bottom: 28px;
+  gap: 10px;
+  padding: 20px var(--px) 0;
 }
-.forfait-card { background: var(--fond); padding: 22px 18px; }
-.forfait-tag {
+.pres-card {
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  padding: 18px 14px;
+  cursor: pointer;
+  transition: border-color .2s, background .15s, transform .15s;
+  position: relative;
+  overflow: hidden;
+}
+.pres-card::before {
+  content: '';
+  position: absolute;
+  top: -20px; right: -20px;
+  width: 70px; height: 70px;
+  background: var(--violet);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.pres-card:hover::before, .pres-card.active::before { opacity: 0.2; }
+.pres-card:hover { border-color: var(--violet-deep); transform: translateY(-2px); }
+.pres-card.active { border-color: var(--violet-deep); background: #FAF7FF; }
+.pres-card-emoji { font-size: 28px; margin-bottom: 8px; display: block; }
+.pres-card-tag {
+  font-family: 'Fredoka', sans-serif;
   font-size: 10px;
-  letter-spacing: 0.2em;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gris-clair);
+  color: var(--gris-light);
+  display: block;
+  margin-bottom: 4px;
+}
+.pres-card h3 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--noir);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.pres-card p {
+  font-size: 12px;
+  color: var(--gris);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.pres-price {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--violet-deep);
+}
+.pres-price span {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  color: var(--gris-light);
+  font-weight: 400;
+}
+.pres-check {
+  position: absolute;
+  top: 10px; right: 10px;
+  width: 22px; height: 22px;
+  background: var(--violet-deep);
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.pres-check svg { width: 12px; height: 12px; }
+.pres-card.active .pres-check { display: flex; }
+
+/* ══ BOOKING PANEL ══ */
+.booking-panel {
+  margin: 20px var(--px) 0;
+  background: #fff;
+  border: 2px solid var(--violet);
+  border-radius: 24px;
+  overflow: hidden;
+  display: none;
+}
+.booking-panel.visible { display: block; }
+.booking-header {
+  background: linear-gradient(135deg, var(--violet) 0%, var(--rose) 100%);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.booking-header-left h4 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--noir);
+  line-height: 1.1;
+}
+.booking-header-left p {
+  font-size: 13px;
+  color: var(--gris);
+  margin-top: 2px;
+}
+.booking-header-price {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--violet-deep);
+}
+.booking-body { padding: 20px; }
+.booking-label {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--violet-deep);
+  display: block;
   margin-bottom: 10px;
 }
-.forfait-card h4 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 1.3;
-  margin-bottom: 12px;
-}
-.forfait-prix {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--mauve);
-}
-.forfait-prix s { font-size: 13px; color: var(--gris-clair); margin-right: 4px; font-weight: 400; font-family: 'DM Sans', sans-serif; }
-
-@media (min-width: 960px) {
-  .forfaits-wrap { padding: 72px 48px; }
-  .forfaits-header {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    gap: 24px;
-  }
-  .forfaits-grid { grid-template-columns: repeat(4, 1fr); }
-  .forfait-card { padding: 28px 24px; }
-}
-
-/* ── OFFRE ÉTUDIANTE ── */
-.etudiante-wrap {
-  background: var(--noir);
-  padding: 52px var(--px);
-}
-.etudiante-inner { max-width: 960px; margin: 0 auto; }
-
-/* mobile : empilé */
-.etudiante-grid-wrap { display: flex; flex-direction: column; gap: 36px; }
-
-.etudiante-content .eyebrow { color: rgba(255,255,255,.35); }
-.etudiante-content h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 44px;
-  font-weight: 500;
+.booking-btn-primary {
+  width: 100%;
+  background: var(--violet-deep);
   color: #fff;
-  line-height: 1.05;
+  padding: 16px;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  transition: background .2s;
+}
+.booking-btn-primary:hover { background: var(--noir); }
+.booking-btn-call {
+  width: 100%;
+  background: #fff;
+  color: var(--noir);
+  padding: 13px 16px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid var(--border);
+  cursor: pointer;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: border-color .2s;
+}
+.booking-btn-call:hover { border-color: var(--violet-deep); }
+.booking-btn-call .num { color: var(--violet-deep); }
+
+/* ══ SECTION ROSE ══ */
+.rose-section {
+  background: #fff;
+  margin: 32px var(--px) 0;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1.5px solid var(--border);
+}
+.rose-img-wrap {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, var(--violet) 0%, var(--rose) 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+}
+.rose-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.rose-body { padding: 24px 20px; }
+.rose-body h2 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--noir);
+  margin-bottom: 4px;
+  line-height: 1.1;
+}
+.rose-body h2 .accent { color: var(--violet-deep); }
+.rose-body .sous-titre {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--violet-deep);
   margin-bottom: 14px;
 }
-.etudiante-content h2 em { font-style: italic; font-weight: 400; color: #c9b8f0; }
-.etudiante-content > p {
+.rose-body p {
   font-size: 14px;
-  color: rgba(255,255,255,.5);
-  margin-bottom: 28px;
-  line-height: 1.8;
-  font-weight: 300;
-}
-.etudiante-prix-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.08);
-}
-.etudiante-prix-item { background: rgba(255,255,255,.04); padding: 20px 14px; text-align: center; }
-.ep-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 8px; }
-.ep-avant { font-size: 12px; color: rgba(255,255,255,.25); text-decoration: line-through; margin-bottom: 3px; }
-.ep-apres { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: #c9b8f0; }
-.etudiante-note { font-size: 11px; color: rgba(255,255,255,.25); margin-top: 14px; text-align: center; }
-
-@media (min-width: 640px) {
-  .etudiante-grid-wrap { flex-direction: row; align-items: center; gap: 48px; }
-  .etudiante-content, .etudiante-grid-wrap > div { flex: 1; }
-}
-@media (min-width: 960px) {
-  .etudiante-wrap { padding: 80px 48px; }
-  .etudiante-content h2 { font-size: 56px; }
-}
-
-/* ── GALERIE ── */
-.galerie-wrap { padding: 48px var(--px); border-bottom: 1px solid var(--border); }
-.galerie-inner { max-width: 960px; margin: 0 auto; }
-.avant-apres { margin-bottom: 16px; overflow: hidden; border: 1px solid var(--border); }
-.avant-apres img { width: 100%; }
-.avant-apres-label {
-  text-align: center;
-  padding: 10px;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
   color: var(--gris);
-  border-top: 1px solid var(--border);
+  line-height: 1.7;
+  margin-bottom: 16px;
 }
-/* 2 colonnes mobile → 3 desktop */
-.galerie-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
+.rose-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.galerie-item { position: relative; overflow: hidden; aspect-ratio: 1; background: var(--mauve-light); }
-.galerie-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
-.galerie-item:hover img { transform: scale(1.05); }
-.galerie-tag {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: rgba(255,255,255,.9);
-  font-size: 10px;
+.rose-badge {
+  background: var(--blanc);
+  border: 1.5px solid var(--border);
+  border-radius: 100px;
+  padding: 7px 14px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 4px 10px;
   color: var(--noir);
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 @media (min-width: 640px) {
-  .galerie-grid { grid-template-columns: repeat(3,1fr); }
+  .rose-section { display: flex; }
+  .rose-img-wrap { width: 240px; flex-shrink: 0; aspect-ratio: auto; }
 }
 @media (min-width: 960px) {
-  .galerie-wrap { padding: 72px 48px; }
+  .rose-img-wrap { width: 360px; }
 }
 
-/* ── AVIS ── */
-.avis-wrap { background: var(--fond-creme); padding: 48px var(--px); border-bottom: 1px solid var(--border); }
-.avis-inner { max-width: 960px; margin: 0 auto; }
-/* 1 col mobile → 2 col tablet+ */
+/* ══ AVIS ══ */
+.avis-section { padding: 36px var(--px) 0; }
 .avis-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  margin-bottom: 24px;
+  gap: 12px;
+  margin-top: 20px;
 }
-.avis-card { background: var(--fond); padding: 24px 20px; }
-.avis-stars { font-size: 12px; letter-spacing: 3px; color: var(--noir); margin-bottom: 14px; }
-.avis-text { font-size: 13px; line-height: 1.85; color: var(--gris); font-style: italic; margin-bottom: 20px; font-weight: 300; }
-.avis-author { display: flex; align-items: center; gap: 10px; }
-.avis-avatar {
-  width: 34px; height: 34px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 12px; font-weight: 700; flex-shrink: 0; color: #fff;
+.avis-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  padding: 18px 16px;
 }
-.avis-name { font-size: 13px; font-weight: 500; }
-.avis-date { font-size: 11px; color: var(--gris-clair); margin-top: 2px; }
-.avis-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.avis-stars { color: var(--violet-deep); font-size: 16px; margin-bottom: 8px; }
+.avis-text {
+  font-size: 14px;
   color: var(--gris);
-  border: 1px solid var(--border);
-  padding: 11px 20px;
-  transition: border-color .2s, color .2s;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-style: italic;
 }
-.avis-cta:hover { border-color: var(--noir); color: var(--noir); }
-
+.avis-author {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--noir);
+}
 @media (min-width: 640px) {
   .avis-grid { grid-template-columns: 1fr 1fr; }
-  .avis-card { padding: 28px 24px; }
-}
-@media (min-width: 960px) {
-  .avis-wrap { padding: 72px 48px; }
 }
 
-/* ── ZONE ── */
-.zone-wrap { padding: 48px var(--px); border-bottom: 1px solid var(--border); }
-.zone-inner { max-width: 960px; margin: 0 auto; }
-.zone-content h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 34px;
-  font-weight: 500;
-  margin-bottom: 16px;
+/* ══ ZONE ══ */
+.zone-section {
+  margin: 32px var(--px) 0;
+  background: linear-gradient(135deg, var(--violet) 0%, var(--rose) 100%);
+  border-radius: 28px;
+  padding: 28px 20px;
+}
+.zone-section h2 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--noir);
+  margin-bottom: 6px;
   line-height: 1.1;
 }
-.zone-content > p { font-size: 14px; color: var(--gris); margin-bottom: 20px; line-height: 1.8; font-weight: 300; }
-.zone-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
-.zone-tag { font-size: 11px; letter-spacing: 0.08em; padding: 5px 12px; border: 1px solid var(--border); color: var(--gris); }
-.zone-tag.active { border-color: var(--noir); color: var(--noir); }
-.zone-note { font-size: 12px; color: var(--gris-clair); margin-bottom: 32px; }
-.zone-options { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
-.zone-option { background: var(--fond); padding: 20px 22px; }
-.zone-option h4 { font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
-.zone-option p { font-size: 13px; color: var(--gris); line-height: 1.65; font-weight: 300; }
-
-@media (min-width: 960px) {
-  .zone-wrap { padding: 72px 48px; }
-  .zone-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
-  .zone-note { margin-bottom: 0; }
-}
-
-/* ── ROSE ── */
-.rose-wrap { padding: 48px var(--px); border-bottom: 1px solid var(--border); }
-.rose-inner { max-width: 960px; margin: 0 auto; }
-.rose-photo {
-  overflow: hidden;
-  aspect-ratio: 4/3;
-  background: var(--mauve-light);
-  margin-bottom: 28px;
-}
-.rose-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-.rose-content .eyebrow { margin-bottom: 12px; }
-.rose-content h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 36px;
-  font-weight: 500;
-  margin-bottom: 6px;
-}
-.sous-titre { font-size: 13px; color: var(--gris); margin-bottom: 20px; }
-.rose-content p {
-  font-size: 14px; color: var(--gris); line-height: 1.85; margin-bottom: 24px; font-weight: 300;
-}
-.rose-credos { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
-.rose-credo { background: var(--fond); padding: 16px 20px; display: flex; gap: 14px; align-items: flex-start; }
-.rose-credo-icon { font-size: 18px; flex-shrink: 0; }
-.rose-credo-text h4 { font-size: 13px; font-weight: 500; margin-bottom: 2px; }
-.rose-credo-text p { font-size: 13px; color: var(--gris); font-weight: 300; }
-
-@media (min-width: 960px) {
-  .rose-wrap { padding: 72px 48px; }
-  .rose-inner { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: center; }
-  .rose-photo { aspect-ratio: 3/4; margin-bottom: 0; }
-  .rose-content h2 { font-size: 48px; }
-}
-
-/* ── POURQUOI ── */
-.pourquoi-wrap { background: var(--fond-creme); padding: 48px var(--px); border-bottom: 1px solid var(--border); }
-.pourquoi-inner { max-width: 960px; margin: 0 auto; }
-/* 1 col mobile → 2 col → 4 col desktop */
-.pourquoi-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-}
-.pourquoi-item { background: var(--fond); padding: 24px 18px; }
-.pourquoi-icon { font-size: 22px; margin-bottom: 12px; }
-.pourquoi-title { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
-.pourquoi-desc { font-size: 13px; color: var(--gris); line-height: 1.65; font-weight: 300; }
-
-@media (min-width: 960px) {
-  .pourquoi-wrap { padding: 72px 48px; }
-  .pourquoi-grid { grid-template-columns: repeat(4,1fr); }
-  .pourquoi-item { padding: 32px 24px; }
-}
-
-/* ── FAQ ── */
-.faq-wrap { padding: 48px var(--px); border-bottom: 1px solid var(--border); }
-.faq-inner { max-width: 960px; margin: 0 auto; }
-.faq-list { display: flex; flex-direction: column; margin-top: 32px; border: 1px solid var(--border); }
-details.faq-item { border-bottom: 1px solid var(--border); background: var(--fond); }
-details.faq-item:last-child { border-bottom: none; }
-details.faq-item summary {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 20px;
-  cursor: pointer;
+.zone-section p {
   font-size: 14px;
+  color: var(--gris);
+  margin-bottom: 18px;
+}
+.zone-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.zone-tag {
+  background: rgba(255,255,255,0.7);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 13px;
   font-weight: 500;
   color: var(--noir);
-  user-select: none;
-  line-height: 1.4;
+}
+.zone-tag.active {
+  background: var(--violet-deep);
+  color: #fff;
+}
+.zone-note { font-size: 12px; color: var(--gris); }
+
+/* ══ FAQ ══ */
+.faq-section { padding: 36px var(--px) 0; }
+.faq-list { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+details.faq-item {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+}
+details.faq-item[open] { border-color: var(--violet-deep); }
+details.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--noir);
+  cursor: pointer;
+  list-style: none;
+  gap: 12px;
 }
 details.faq-item summary::-webkit-details-marker { display: none; }
-.faq-icon { font-size: 20px; color: var(--gris-clair); flex-shrink: 0; margin-left: 14px; transition: transform .2s; }
+.faq-icon {
+  font-size: 20px;
+  color: var(--violet-deep);
+  flex-shrink: 0;
+  transition: transform .2s;
+}
 details.faq-item[open] .faq-icon { transform: rotate(45deg); }
-.faq-answer { padding: 0 20px 18px; font-size: 14px; color: var(--gris); line-height: 1.8; font-weight: 300; }
-
-@media (min-width: 960px) {
-  .faq-wrap { padding: 72px 48px; }
-  details.faq-item summary { padding: 22px 28px; }
-  .faq-answer { padding: 0 28px 22px; }
+.faq-answer {
+  padding: 0 18px 16px;
+  font-size: 14px;
+  color: var(--gris);
+  line-height: 1.7;
 }
 
-/* ── FOOTER CTA ── */
-.footer-cta-wrap {
+/* ══ FOOTER CTA ══ */
+.footer-cta {
+  margin: 36px var(--px) 0;
   background: var(--noir);
-  padding: 60px var(--px);
+  border-radius: 28px;
+  padding: 36px 24px;
   text-align: center;
 }
-.footer-cta-wrap .eyebrow { color: rgba(255,255,255,.35); }
-.footer-cta-wrap h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 38px;
-  font-weight: 400;
-  font-style: italic;
-  color: #fff;
-  margin-bottom: 14px;
-  line-height: 1.1;
-}
-.footer-cta-wrap > p { font-size: 14px; color: rgba(255,255,255,.45); margin-bottom: 32px; font-weight: 300; }
-.footer-cta-btns { display: flex; flex-direction: column; gap: 12px; align-items: center; }
-
-@media (min-width: 640px) {
-  .footer-cta-btns { flex-direction: row; justify-content: center; flex-wrap: wrap; }
-}
-@media (min-width: 960px) {
-  .footer-cta-wrap { padding: 90px 48px; }
-  .footer-cta-wrap h2 { font-size: 58px; }
-}
-
-/* ── FOOTER ── */
-footer { background: var(--fond-creme); padding: 44px var(--px) 28px; border-top: 1px solid var(--border); }
-.footer-inner { max-width: 960px; margin: 0 auto 32px; display: flex; flex-direction: column; gap: 28px; }
-.footer-brand img { height: 40px; margin-bottom: 12px; mix-blend-mode: multiply; }
-.footer-brand-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+.footer-cta .eyebrow {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+  color: var(--violet);
+  display: block;
   margin-bottom: 10px;
 }
-.footer-brand-name span { font-weight: 400; font-style: italic; }
-.footer-brand p { font-size: 13px; color: var(--gris); margin-bottom: 4px; font-weight: 300; }
-.footer-col h5 { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; margin-bottom: 14px; }
-.footer-col a { display: block; font-size: 13px; color: var(--gris); margin-bottom: 8px; transition: color .2s; font-weight: 300; }
-.footer-col a:hover { color: var(--noir); }
-.footer-bottom {
-  text-align: center;
-  font-size: 12px;
-  color: var(--gris-clair);
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
+.footer-cta h2 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+.footer-cta p { font-size: 14px; color: rgba(255,255,255,0.65); margin-bottom: 24px; }
+.footer-cta-btns { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+.btn-footer-rdv {
+  background: var(--violet-deep);
+  color: #fff;
+  padding: 16px 32px;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  width: 100%;
+  max-width: 300px;
+  transition: background .2s;
+}
+.btn-footer-rdv:hover { background: var(--violet); color: var(--noir); }
+.btn-footer-wa {
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+  padding: 14px 32px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  border-radius: 100px;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: border-color .2s;
+  text-decoration: none;
+}
+.btn-footer-wa:hover { border-color: rgba(255,255,255,.6); color: #fff; }
+
+/* ══ FOOTER ══ */
+footer {
+  margin-top: 32px;
+  border-top: 1.5px solid var(--border);
+  padding: 32px var(--px) 24px;
+  background: var(--blanc);
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
   max-width: 960px;
   margin: 0 auto;
 }
-
+.footer-brand-name {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--noir);
+  margin-bottom: 6px;
+}
+.footer-brand-name .dot { color: var(--violet-deep); }
+.footer-brand p { font-size: 13px; color: var(--gris); margin-bottom: 4px; }
+.footer-brand a { color: var(--violet-deep); }
+.footer-col h5 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gris-light);
+  margin-bottom: 10px;
+}
+.footer-col a {
+  display: block;
+  font-size: 14px;
+  color: var(--gris);
+  margin-bottom: 6px;
+  transition: color .2s;
+}
+.footer-col a:hover { color: var(--violet-deep); }
+.footer-bottom {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gris-light);
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
 @media (min-width: 640px) {
-  .footer-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-}
-@media (min-width: 960px) {
-  footer { padding: 52px 60px 32px; }
-  .footer-inner { grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; }
+  .footer-inner { grid-template-columns: 1fr 1fr 1fr; }
+  .footer-cta-btns { flex-direction: row; justify-content: center; }
 }
 
-/* ── BOUTONS FLOTTANTS ── */
+/* ══ FLOTTANTS ══ */
 .floating-btns {
   position: fixed;
   bottom: 20px;
   right: 16px;
-  z-index: 300;
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: flex-end;
+  z-index: 999;
 }
-.float-btn {
+.float-call {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 14px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
+  background: var(--violet-deep);
+  color: #fff;
+  padding: 13px 18px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 100px;
   text-decoration: none;
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  transition: transform .15s, box-shadow .15s;
-  white-space: nowrap;
+  box-shadow: 0 6px 24px rgba(138,123,244,0.4);
+  transition: background .2s;
 }
-.float-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
-.float-btn-calendly { background: var(--noir); color: #fff; }
-.float-btn-wa { background: #25D366; color: #fff; }
-/* label visible seulement desktop */
-.float-label { display: none; }
+.float-call:hover { background: var(--noir); }
+.float-wa {
+  width: 48px;
+  height: 48px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+  transition: transform .2s;
+}
+.float-wa:hover { transform: scale(1.08); }
 
-@media (min-width: 640px) {
-  .floating-btns { bottom: 28px; right: 24px; gap: 12px; }
-  .float-btn { padding: 13px 20px; }
-  .float-label { display: inline; }
+/* ══ DISPO SECTION ══ */
+.dispo-section {
+  padding: 36px var(--px) 0;
 }
+.dispo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 18px;
+}
+.dispo-option {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  padding: 16px 14px;
+}
+.dispo-option h4 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--noir);
+  margin-bottom: 4px;
+}
+.dispo-option p { font-size: 12px; color: var(--gris); line-height: 1.5; }
+
+/* ══ PADDING BOTTOM pour les flottants ══ */
+.page-end { height: 80px; }
+
 </style>
 </head>
 <body>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGNX7HHW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TGNX7HHW');</script>
 
-<div class="nav-top">📍 La Rochelle &amp; environs &nbsp;·&nbsp; À domicile ou en salon agréé &nbsp;·&nbsp; Réservation en ligne 24h/24</div>
+<!-- ══ BANDEAU ══ -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Extensions de cils à La Rochelle</span>
+    <span>Lash Lift · Rehaussement naturel</span>
+    <span>Brow Lift · Sourcils parfaits</span>
+    <span>À domicile ou salon agréé</span>
+    <span>Rose se déplace chez vous</span>
+    <span>5 ★ sur Google</span>
+    <span>Diplômée en esthétique</span>
+    <span>Extensions de cils à La Rochelle</span>
+    <span>Lash Lift · Rehaussement naturel</span>
+    <span>Brow Lift · Sourcils parfaits</span>
+    <span>À domicile ou salon agréé</span>
+    <span>Rose se déplace chez vous</span>
+    <span>5 ★ sur Google</span>
+    <span>Diplômée en esthétique</span>
+  </div>
+</div>
 
+<!-- ══ NAV ══ -->
 <nav>
-  <a class="nav-logo" href="/">
-    <img src="images/logo.png" alt="Iconic Face logo" onerror="this.style.display='none'">
-    <span class="nav-logo-text">Iconic <em>Face</em></span>
-  </a>
+  <div class="nav-brand">Iconic<span class="dot">✦</span>Face</div>
   <ul class="nav-links">
     <li><a href="#prestations">Prestations</a></li>
-    <li><a href="#resultats">Résultats</a></li>
-    <li><a href="#avis">Avis</a></li>
     <li><a href="#rose">Rose</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
-  <button class="nav-cta" onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face'})">Prendre RDV</button>
+  <a class="nav-cta-call" href="tel:+33767508332">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    07 67 50 83 32
+  </a>
 </nav>
 
+<!-- ══ HERO ══ -->
 <section class="hero">
-  <p class="hero-eyebrow">Spécialiste cils &amp; sourcils · La Rochelle</p>
-  <h1>Vos <em>yeux,</em><br>sublimés.</h1>
-  <p class="hero-sub">Extensions · Lash lift · Brow lift — résultats naturels et durables, à domicile ou en salon agréé.</p>
-  <div style="display:flex;justify-content:center;margin-bottom:32px;">
-    <div class="hero-kpis">
-      <div class="kpi"><span class="kpi-val">+1 an</span><span class="kpi-label">d'expérience</span></div>
-      <div class="kpi"><span class="kpi-val">★ 5/5</span><span class="kpi-label">Avis Google</span></div>
-      <div class="kpi"><span class="kpi-val">Paris</span><span class="kpi-label">Formée au Marais</span></div>
-      <div class="kpi"><span class="kpi-val">24h/24</span><span class="kpi-label">Réservation en ligne</span></div>
-    </div>
+  <div class="hero-decos" aria-hidden="true">
+    <span class="deco">✨</span>
+    <span class="deco">🌙</span>
+    <span class="deco">🪄</span>
+    <span class="deco">💜</span>
+    <span class="deco">⭐</span>
+  </div>
+  <span class="hero-eyebrow">La Rochelle · À domicile &amp; salon agréé</span>
+  <h1>Vos cils,<br><span class="accent">sublimés</span></h1>
+  <p class="hero-location">Extensions · Lash Lift · Brow Lift</p>
+  <p class="hero-sub">Rose se déplace chez vous dans toute la zone de La Rochelle — sans frais supplémentaires.</p>
+  <div class="hero-trust">
+    <div class="trust-pill"><span class="star">★★★★★</span> 5/5 Google</div>
+    <div class="trust-pill">🎓 Diplômée</div>
+    <div class="trust-pill">🏠 À domicile</div>
   </div>
   <div class="hero-btns">
-    <button class="btn-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face'})">Réserver en ligne</button>
-    <a class="btn-secondary" href="#prestations">Voir les prestations &amp; tarifs</a>
+    <button class="btn-rdv-hero" onclick="document.getElementById('prestations').scrollIntoView({behavior:'smooth'})">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Prendre rendez-vous
+    </button>
+    <a class="btn-call-hero" href="tel:+33767508332">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Ou appelez Rose : <span class="num">07 67 50 83 32</span>
+    </a>
   </div>
 </section>
 
-<div class="tabs">
-  <a class="tab active" href="#prestations">Cils</a>
-  <a class="tab" href="#prestations">Sourcils</a>
-  <a class="tab" href="#forfaits">Duos &amp; Trios</a>
-  <a class="tab" href="#etudiante">Offre étudiante</a>
+<!-- ══ PRESTATIONS ══ -->
+<section id="prestations">
+  <div class="section-header">
+    <span class="section-eyebrow">Nos soins</span>
+    <h2 class="section-title">Choisissez votre prestation</h2>
+    <p class="section-sub">Sélectionnez un soin pour réserver votre créneau</p>
+  </div>
+  <div class="prestations-grid" id="presGrid">
+
+    <div class="pres-card" data-name="Lash Lift — Rehaussement de cils" data-price="55€" data-duree="~1h" onclick="selectPres(this)">
+      <div class="pres-check"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>
+      <span class="pres-card-emoji">👁️</span>
+      <span class="pres-card-tag">Populaire</span>
+      <h3>Lash Lift</h3>
+      <p>Rehaussement naturel · 6 à 8 semaines</p>
+      <div class="pres-price">55€ <span>/ séance</span></div>
+    </div>
+
+    <div class="pres-card" data-name="Extensions Classique" data-price="75€" data-duree="~1h30" onclick="selectPres(this)">
+      <div class="pres-check"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>
+      <span class="pres-card-emoji">✨</span>
+      <span class="pres-card-tag">Idéal 1ère fois</span>
+      <h3>Extensions Classique</h3>
+      <p>Regard intense · 3 à 4 semaines</p>
+      <div class="pres-price">75€ <span>/ pose</span></div>
+    </div>
+
+    <div class="pres-card" data-name="Volume Russe" data-price="90€" data-duree="~2h" onclick="selectPres(this)">
+      <div class="pres-check"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>
+      <span class="pres-card-emoji">💫</span>
+      <span class="pres-card-tag">Effet maximal</span>
+      <h3>Volume Russe</h3>
+      <p>Densité maximale · 3 à 4 semaines</p>
+      <div class="pres-price">90€ <span>/ pose</span></div>
+    </div>
+
+    <div class="pres-card" data-name="Brow Lift — Sourcils" data-price="45€" data-duree="~1h" onclick="selectPres(this)">
+      <div class="pres-check"><svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>
+      <span class="pres-card-emoji">🌙</span>
+      <span class="pres-card-tag">Sourcils</span>
+      <h3>Brow Lift</h3>
+      <p>Sourcils redessinés · 6 à 8 semaines</p>
+      <div class="pres-price">45€ <span>/ séance</span></div>
+    </div>
+
+  </div>
+
+  <!-- Booking panel -->
+  <div class="booking-panel" id="bookingPanel">
+    <div class="booking-header">
+      <div class="booking-header-left">
+        <h4 id="bp-name">—</h4>
+        <p id="bp-duree">Durée estimée</p>
+      </div>
+      <div class="booking-header-price" id="bp-price">—</div>
+    </div>
+    <div class="booking-body">
+      <span class="booking-label">Réserver ce soin</span>
+      <button class="booking-btn-primary" onclick="openCalendly()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Choisir mon créneau →
+      </button>
+      <a class="booking-btn-call" href="tel:+33767508332">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Ou appeler Rose : <span class="num">07 67 50 83 32</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DISPONIBILITÉS ══ -->
+<section class="dispo-section" id="dispo">
+  <div class="section-header" style="padding: 0 0 0 0;">
+    <span class="section-eyebrow">Organisation</span>
+    <h2 class="section-title">Comme vous préférez</h2>
+  </div>
+  <div class="dispo-grid">
+    <div class="dispo-option">
+      <h4>🚗 À domicile</h4>
+      <p>Rose se déplace avec tout son matériel. Aucun déplacement de votre côté.</p>
+    </div>
+    <div class="dispo-option">
+      <h4>🏡 En salon</h4>
+      <p>Salon agréé à La Rochelle · Cadre propre et équipé.</p>
+    </div>
+    <div class="dispo-option">
+      <h4>🌙 Soirs &amp; WE</h4>
+      <p>Disponibilités flexibles adaptées à votre emploi du temps.</p>
+    </div>
+    <div class="dispo-option">
+      <h4>📍 20 km</h4>
+      <p>Zone de déplacement gratuite autour de La Rochelle.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ZONE ══ -->
+<div class="zone-section" id="zone">
+  <span class="section-eyebrow" style="color:var(--violet-deep); margin-bottom:8px; display:block; font-family:'Fredoka',sans-serif; font-size:12px; font-weight:500; letter-spacing:.15em; text-transform:uppercase;">Zone d'intervention</span>
+  <h2>Rose vient chez vous</h2>
+  <p>Déplacement gratuit dans la zone couverte — pas de frais supplémentaires.</p>
+  <div class="zone-tags">
+    <span class="zone-tag active">La Rochelle centre</span>
+    <span class="zone-tag active">Les Minimes</span>
+    <span class="zone-tag active">Laleu</span>
+    <span class="zone-tag active">Tasdon</span>
+    <span class="zone-tag active">Port-Neuf</span>
+    <span class="zone-tag">Aytré</span>
+    <span class="zone-tag">Périgny</span>
+    <span class="zone-tag">Lagord</span>
+    <span class="zone-tag">Puilboreau</span>
+  </div>
+  <p class="zone-note">Vous êtes hors zone ? Écrivez-nous, on s'arrange. 💜</p>
 </div>
 
-<div class="section-intro" id="prestations">
-  <span class="eyebrow">Nos soins</span>
-  <h2>Prestations &amp; tarifs</h2>
-  <p>À domicile ou en salon agréé · La Rochelle &amp; environs</p>
-</div>
-
-<div class="prestations-wrap">
-
-  <div class="prestation">
-    <div class="prestation-img">
-      <img src="images/resultats/resultat-2.jpg" alt="Extensions de cils classique La Rochelle"
-        onerror="this.parentElement.innerHTML='<div class=\'prestation-img-fallback\'><div class=\'fi\'>✨</div><div class=\'fl\'>Extensions</div></div>'">
-    </div>
-    <div class="prestation-body">
-      <p class="prestation-tag">Prestation cils</p>
-      <h3>Extensions <em>Classique</em></h3>
-      <p class="prestation-desc">Un regard allongé et naturel — chaque extension est posée individuellement sur vos cils naturels. Effet mascara magnifié, idéal pour une première extension ou un rendu sobre au quotidien. Tenue 3 à 4 semaines.</p>
-      <table class="tarif-table">
-        <thead><tr><th>Prestation</th><th>Tarif</th></tr></thead>
-        <tbody>
-          <tr><td>Pose initiale</td><td>80 €</td></tr>
-          <tr class="retouche"><td>Retouche (≤ 3 semaines)</td><td>45 €</td></tr>
-        </tbody>
-      </table>
-      <button class="btn-rdv" onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face'})">Je prends RDV</button>
+<!-- ══ ROSE ══ -->
+<section class="rose-section" id="rose">
+  <div class="rose-img-wrap">
+    <img src="images/rose.jpg" alt="Rose, praticienne Iconic Face La Rochelle"
+      onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;background:linear-gradient(135deg,#C7B8F7,#FFD6F5);display:flex;align-items:center;justify-content:center;font-size:80px;\'>🌸</div>'">
+  </div>
+  <div class="rose-body">
+    <span class="section-eyebrow">Votre praticienne</span>
+    <h2>Rencontrez <span class="accent">Rose</span></h2>
+    <p class="sous-titre">Diplômée en esthétique · Spécialiste cils &amp; sourcils</p>
+    <p>Passionnée par la beauté du regard, Rose a obtenu son diplôme professionnel et a exercé au <strong>Marais à Paris</strong> avant de poser ses valises à La Rochelle pour lancer Iconic Face.</p>
+    <div class="rose-badges">
+      <span class="rose-badge">🎓 Diplômée</span>
+      <span class="rose-badge">🏠 À domicile</span>
+      <span class="rose-badge">💜 À l'écoute</span>
+      <span class="rose-badge">⭐ 5/5 Google</span>
     </div>
   </div>
+</section>
 
-  <div class="prestation">
-    <div class="prestation-img">
-      <img src="images/resultats/resultat-3.jpg" alt="Volume russe La Rochelle"
-        onerror="this.parentElement.innerHTML='<div class=\'prestation-img-fallback\'><div class=\'fi\'>💫</div><div class=\'fl\'>Volume Russe</div></div>'">
+<!-- ══ AVIS ══ -->
+<section class="avis-section" id="avis">
+  <div class="section-header" style="padding: 0;">
+    <span class="section-eyebrow">Témoignages</span>
+    <h2 class="section-title">Ce que disent nos clientes</h2>
+  </div>
+  <div class="avis-grid">
+    <div class="avis-card">
+      <div class="avis-stars">★★★★★</div>
+      <p class="avis-text">"Résultat naturel et impeccable. Rose est très professionnelle et à l'écoute. Je recommande à 100% !"</p>
+      <div class="avis-author">— Marie L., La Rochelle</div>
     </div>
-    <div class="prestation-body">
-      <p class="prestation-tag">Prestation cils</p>
-      <h3>Volume <em>Russe</em></h3>
-      <p class="prestation-desc">Densité et intensité maximale. Des bouquets de micro-extensions appliqués sur chaque cil naturel pour un effet spectaculaire et léger à porter. Tenue 3 à 4 semaines.</p>
-      <table class="tarif-table">
-        <thead><tr><th>Prestation</th><th>Tarif</th></tr></thead>
-        <tbody>
-          <tr><td>Pose initiale</td><td>100 €</td></tr>
-          <tr class="retouche"><td>Retouche (≤ 3 semaines)</td><td>55 €</td></tr>
-        </tbody>
-      </table>
-      <button class="btn-rdv" onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face'})">Je prends RDV</button>
+    <div class="avis-card">
+      <div class="avis-stars">★★★★★</div>
+      <p class="avis-text">"Le lash lift a changé ma routine maquillage. Tellement pratique, ça tient super bien !"</p>
+      <div class="avis-author">— Camille R., Aytré</div>
+    </div>
+    <div class="avis-card">
+      <div class="avis-stars">★★★★★</div>
+      <p class="avis-text">"Super expérience à domicile, Rose est venue chez moi avec tout son matériel. Cadre parfait."</p>
+      <div class="avis-author">— Sophie M., Lagord</div>
+    </div>
+    <div class="avis-card">
+      <div class="avis-stars">★★★★★</div>
+      <p class="avis-text">"Volume russe magnifique, produits de qualité. Je suis revenue deux fois déjà !"</p>
+      <div class="avis-author">— Léa D., Les Minimes</div>
     </div>
   </div>
-
-  <div class="prestation">
-    <div class="prestation-img">
-      <img src="images/resultats/resultat-1.jpg" alt="Lash lift La Rochelle"
-        onerror="this.parentElement.innerHTML='<div class=\'prestation-img-fallback\'><div class=\'fi\'>🌊</div><div class=\'fl\'>Lash Lift</div></div>'">
-    </div>
-    <div class="prestation-body">
-      <p class="prestation-tag">Prestation cils</p>
-      <h3>Lash <em>Lift</em></h3>
-      <p class="prestation-desc">Vos cils naturels relevés et courbés durablement, sans rien ajouter. Un regard ouvert et lumineux jusqu'à 6–8 semaines, sans entretien quotidien.</p>
-      <table class="tarif-table">
-        <thead><tr><th>Prestation</th><th>Tarif</th></tr></thead>
-        <tbody>
-          <tr><td>Lash Lift</td><td>60 €</td></tr>
-          <tr><td>Lash Lift + Teinture</td><td>75 €</td></tr>
-        </tbody>
-      </table>
-      <button class="btn-rdv" onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face'})">Je prends RDV</button>
-    </div>
-  </div>
-
-  <div class="prestation">
-    <div class="prestation-img">
-      <img src="images/resultats/resultat-4.jpg" alt="Brow lift sourcils La Rochelle"
-        onerror="this.parentElement.innerHTML='<div class=\'prestation-img-fallback\'><div class=\'fi\'>🦋</div><div class=\'fl\'>Brow Lift</div></div>'">
-    </div>
-    <div class="prestation-body">
-      <p class="prestation-tag">Prestation sourcils</p>
-      <h3>Brow <em>Lift</em></h3>
-      <p class="prestation-desc">Vos sourcils restructurés et relevés naturellement — sans crayon, sans maquillage permanent. Tenue jusqu'à 6 semaines. Associable à une teinture pour un effet plus marqué.</p>
-      <table class="tarif-table">
-        <thead><tr><th>Prestation</th><th>Tarif</th></tr></thead>
-        <tbody>
-          <tr><td>Brow Lift</td><td>55 €</td></tr>
-          <tr><td>Brow Lift + Teinture</td><td>70 €</td></tr>
-        </tbody>
-      </table>
-      <button class="btn-rdv" onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face'})">Je prends RDV</button>
-    </div>
-  </div>
-
-</div>
-
-<div class="forfaits-wrap" id="forfaits">
-  <div class="forfaits-inner">
-    <div class="forfaits-header">
-      <div>
-        <span class="eyebrow">Nos offres</span>
-        <h2>Forfaits Duo &amp; Trio</h2>
-      </div>
-      <p>Deux ou trois prestations en une,<br>avec un tarif préférentiel.</p>
-    </div>
-    <div class="forfaits-grid">
-      <div class="forfait-card"><p class="forfait-tag">Duo cils</p><h4>Lash Lift + Teinture</h4><p class="forfait-prix"><s>135 €</s> 75 €</p></div>
-      <div class="forfait-card"><p class="forfait-tag">Duo regard complet</p><h4>Lash Lift + Brow Lift</h4><p class="forfait-prix"><s>115 €</s> 100 €</p></div>
-      <div class="forfait-card"><p class="forfait-tag">Duo sourcils</p><h4>Brow Lift + Teinture</h4><p class="forfait-prix"><s>125 €</s> 70 €</p></div>
-      <div class="forfait-card"><p class="forfait-tag">Trio signature</p><h4>Lash Lift + Teinture + Brow Lift</h4><p class="forfait-prix"><s>185 €</s> 155 €</p></div>
-    </div>
-    <button class="btn-rdv" onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face'})">Je prends RDV</button>
-  </div>
-</div>
-
-<div class="etudiante-wrap" id="etudiante">
-  <div class="etudiante-inner">
-    <div class="etudiante-grid-wrap">
-      <div class="etudiante-content">
-        <span class="eyebrow">Offre exclusive</span>
-        <h2>–30%<br><em>étudiante</em></h2>
-        <p>Sur présentation de ta carte étudiante. Valable toute l'année à La Rochelle.</p>
-        <button class="btn-etudiante" onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face'})">Je profite de l'offre</button>
-      </div>
-      <div>
-        <div class="etudiante-prix-grid">
-          <div class="etudiante-prix-item"><p class="ep-label">Lash Lift</p><p class="ep-avant">60 €</p><p class="ep-apres">42 €</p></div>
-          <div class="etudiante-prix-item"><p class="ep-label">Extensions</p><p class="ep-avant">80 €</p><p class="ep-apres">56 €</p></div>
-          <div class="etudiante-prix-item"><p class="ep-label">Volume russe</p><p class="ep-avant">100 €</p><p class="ep-apres">70 €</p></div>
-          <div class="etudiante-prix-item"><p class="ep-label">Brow Lift</p><p class="ep-avant">55 €</p><p class="ep-apres">38 €</p></div>
-        </div>
-        <p class="etudiante-note">* Carte étudiante à présenter le jour de la séance</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="galerie-wrap" id="resultats">
-  <div class="galerie-inner">
-    <div class="section-intro" style="padding:0 0 28px;">
-      <h2>Résultats <em>réels</em></h2>
-      <p>Photos de nos clientes — non retouchées</p>
-    </div>
-    <div class="galerie-grid">
-      <div class="galerie-item"><img src="images/resultats/resultat-1.jpg" alt="Lash lift"><span class="galerie-tag">Lash lift</span></div>
-      <div class="galerie-item"><img src="images/resultats/resultat-2.jpg" alt="Extensions"><span class="galerie-tag">Extensions</span></div>
-      <div class="galerie-item"><img src="images/resultats/resultat-3.jpg" alt="Volume russe"><span class="galerie-tag">Volume russe</span></div>
-      <div class="galerie-item"><img src="images/resultats/resultat-4.jpg" alt="Brow lift"><span class="galerie-tag">Brow lift</span></div>
-      <div class="galerie-item"><img src="images/resultats/resultat-5.jpg" alt="Extensions"><span class="galerie-tag">Extensions</span></div>
-      <div class="galerie-item"><img src="images/resultats/resultat-6.jpg" alt="Volume russe"><span class="galerie-tag">Volume russe</span></div>
-    </div>
-  </div>
-</div>
-
-<div class="avis-wrap" id="avis">
-  <div class="avis-inner">
-    <div class="section-intro" style="padding:0 0 28px;">
-      <span class="eyebrow">Témoignages</span>
-      <h2>Ce qu'elles <em>disent</em></h2>
-      <p>Avis Google vérifiés · ★★★★★ 5/5</p>
-    </div>
-    <div class="avis-grid">
-      <div class="avis-card">
-        <div class="avis-stars">★★★★★</div>
-        <p class="avis-text">"J'ai testé une prestation de cils chez Iconic Face et je suis vraiment ravie du résultat ! Le rendu est super naturel tout en mettant bien le regard en valeur, exactement ce que je voulais. L'accueil est chaleureux, on se sent à l'aise tout de suite. Je recommande à 100 % !"</p>
-        <div class="avis-author"><div class="avis-avatar" style="background:#f97316;">BR</div><div><p class="avis-name">Bubble Ride</p><p class="avis-date">Avis Google · il y a 1 mois</p></div></div>
-      </div>
-      <div class="avis-card">
-        <div class="avis-stars">★★★★★</div>
-        <p class="avis-text">"Rose est vraiment à l'écoute, elle a su exactement quoi me proposer. C'est précis, léger à porter, y'a un vrai soin dans la pose. Le rapport qualité-prix est vraiment honnête. Je recommande sans hésiter. 🖤"</p>
-        <div class="avis-author"><div class="avis-avatar" style="background:#8b5cf6;">E</div><div><p class="avis-name">Emilia S.</p><p class="avis-date">Avis Google · il y a 1 mois</p></div></div>
-      </div>
-      <div class="avis-card">
-        <div class="avis-stars">★★★★★</div>
-        <p class="avis-text">"La prise de rendez-vous est simple et rapide. Le fait que ce soit à domicile, c'est un gros plus. La prestation est au top, très professionnelle, tout est fait avec soin. Le résultat tient super bien dans le temps."</p>
-        <div class="avis-author"><div class="avis-avatar" style="background:#ec4899;">V</div><div><p class="avis-name">Victoria</p><p class="avis-date">Avis Google · il y a 1 mois</p></div></div>
-      </div>
-      <div class="avis-card">
-        <div class="avis-stars">★★★★★</div>
-        <p class="avis-text">"Très satisfaite de mon expérience ! J'adore le résultat de mon rehaussement de cils, la prestation est réalisée avec douceur et on se sent à l'aise du début à la fin. Je reviendrai, merci encore ! 😊"</p>
-        <div class="avis-author"><div class="avis-avatar" style="background:#6b7280;">E</div><div><p class="avis-name">Emma</p><p class="avis-date">Avis Google · il y a 2 semaines</p></div></div>
-      </div>
-    </div>
-    <a class="avis-cta" href="https://share.google/12HZAzdlXFxyVYGcF" target="_blank" rel="noopener">
-      <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+  <div style="text-align:center; margin-top:18px;">
+    <a href="https://share.google/12HZAzdlXFxyVYGcF" target="_blank" rel="noopener"
+       style="font-family:'Fredoka',sans-serif; font-size:14px; font-weight:600; color:var(--violet-deep); border-bottom:2px solid var(--violet); padding-bottom:2px;">
       Laisser un avis Google ✨
     </a>
   </div>
-</div>
+</section>
 
-<div class="zone-wrap" id="domicile">
-  <div class="zone-inner">
-    <div class="zone-content">
-      <span class="eyebrow">Zone d'intervention</span>
-      <h2>Comme<br><em>vous préférez</em></h2>
-      <p>À domicile ou en salon — c'est vous qui choisissez. Rose se déplace dans toute la zone de La Rochelle sans frais supplémentaires.</p>
-      <div class="zone-tags">
-        <span class="zone-tag active">La Rochelle centre</span><span class="zone-tag active">Les Minimes</span><span class="zone-tag active">Laleu</span><span class="zone-tag active">Tasdon</span><span class="zone-tag active">Port-Neuf</span><span class="zone-tag">Périgny</span><span class="zone-tag">Aytré</span><span class="zone-tag">Lagord</span><span class="zone-tag">Puilboreau</span>
-      </div>
-      <p class="zone-note">Vous êtes hors zone ? Écrivez-nous, on fera notre possible.</p>
-    </div>
-    <div class="zone-options">
-      <div class="zone-option"><h4>🚗 Déplacement à domicile</h4><p>Rose se déplace avec tout le matériel professionnel. Pas de frais dans la zone couverte.</p></div>
-      <div class="zone-option"><h4>🏡 Accueil en salon agréé</h4><p>Salon agréé à La Rochelle — cadre propre, matériel certifié.</p></div>
-      <div class="zone-option"><h4>⏰ Disponibilités flexibles</h4><p>Soirs &amp; week-ends disponibles, adaptés à votre emploi du temps.</p></div>
-      <div class="zone-option"><h4>🛋️ Confort total</h4><p>À domicile chez vous ou dans un espace dédié et équipé au salon.</p></div>
-    </div>
+<!-- ══ FAQ ══ -->
+<section class="faq-section" id="faq">
+  <div class="section-header" style="padding: 0;">
+    <span class="section-eyebrow">Questions</span>
+    <h2 class="section-title">Avant de réserver</h2>
   </div>
-</div>
-
-<div class="rose-wrap" id="rose">
-  <div class="rose-inner">
-    <div class="rose-photo">
-      <img src="images/rose.jpg" alt="Rose, praticienne Iconic Face La Rochelle"
-        onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;background:var(--mauve-light);display:flex;align-items:center;justify-content:center;font-size:64px;opacity:.3;\'>👩</div>'">
-    </div>
-    <div class="rose-content">
-      <span class="eyebrow">Votre praticienne</span>
-      <h2>Rencontrez<br><em>Rose</em></h2>
-      <p class="sous-titre">Diplômée en esthétique · Spécialiste cils &amp; sourcils</p>
-      <p>Passionnée par la beauté du regard, Rose a obtenu son diplôme professionnel en esthétique et a exercé au <strong>Marais à Paris</strong> — l'un des quartiers les plus exigeants de la capitale — avant de poser ses valises à La Rochelle pour lancer Iconic Face.</p>
-      <div class="rose-credos">
-        <div class="rose-credo"><div class="rose-credo-icon">🎓</div><div class="rose-credo-text"><h4>Diplômée en esthétique</h4><p>Formation professionnelle certifiée</p></div></div>
-        <div class="rose-credo"><div class="rose-credo-icon">🏠</div><div class="rose-credo-text"><h4>À domicile ou en salon</h4><p>Matériel professionnel, cadre agréé</p></div></div>
-        <div class="rose-credo"><div class="rose-credo-icon">💜</div><div class="rose-credo-text"><h4>À l'écoute</h4><p>Résultat adapté à votre morphologie et vos envies</p></div></div>
-      </div>
-    </div>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>Combien de temps dure une séance ? <span class="faq-icon">＋</span></summary>
+      <p class="faq-answer">Comptez entre 1h30 et 2h pour les extensions, et environ 1h pour le lash lift ou brow lift. Rose prend le temps nécessaire — jamais à la va-vite.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Est-ce que ça abîme les cils naturels ? <span class="faq-icon">＋</span></summary>
+      <p class="faq-answer">Non, si la pose est bien faite. Rose utilise des produits certifiés et adapte le poids des extensions à vos cils naturels. Un suivi régulier préserve leur santé.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Combien de temps ça tient ? <span class="faq-icon">＋</span></summary>
+      <p class="faq-answer">Les extensions tiennent 3 à 4 semaines selon votre cycle de pousse. Le lash lift dure entre 6 et 8 semaines. Une retouche toutes les 3 semaines suffit.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Que faut-il prévoir pour une séance à domicile ? <span class="faq-icon">＋</span></summary>
+      <p class="faq-answer">Juste un espace pour s'allonger confortablement — un lit ou canapé suffisent. Rose apporte tout le matériel professionnel.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Je n'ai jamais fait d'extensions, par où commencer ? <span class="faq-icon">＋</span></summary>
+      <p class="faq-answer">Le lash lift est idéal pour une première fois. Pour les extensions, le style Classique est parfait pour découvrir en douceur. Rose vous conseillera dès le début de la séance.</p>
+    </details>
   </div>
-</div>
+</section>
 
-<div class="pourquoi-wrap">
-  <div class="pourquoi-inner">
-    <div class="section-intro" style="padding:0 0 28px;">
-      <span class="eyebrow">Notre promesse</span>
-      <h2>Pourquoi nous <em>choisir</em></h2>
-    </div>
-    <div class="pourquoi-grid">
-      <div class="pourquoi-item"><div class="pourquoi-icon">🎯</div><p class="pourquoi-title">Sur-mesure</p><p class="pourquoi-desc">Adapté à votre morphologie &amp; vos envies — Rose conseille avant de poser.</p></div>
-      <div class="pourquoi-item"><div class="pourquoi-icon">🌿</div><p class="pourquoi-title">Produits premium</p><p class="pourquoi-desc">Matériaux certifiés, sans irritants, adaptés aux cils sensibles.</p></div>
-      <div class="pourquoi-item"><div class="pourquoi-icon">🏠</div><p class="pourquoi-title">Domicile ou salon</p><p class="pourquoi-desc">À vous de choisir — même qualité, même soin.</p></div>
-      <div class="pourquoi-item"><div class="pourquoi-icon">💜</div><p class="pourquoi-title">Suivi client</p><p class="pourquoi-desc">Conseils entretien &amp; retouches pour un rendu impeccable dans le temps.</p></div>
-    </div>
-  </div>
-</div>
-
-<div class="faq-wrap" id="faq">
-  <div class="faq-inner">
-    <div class="section-intro" style="padding:0;">
-      <span class="eyebrow">Questions fréquentes</span>
-      <h2>Avant de <em>réserver</em></h2>
-      <p>Tout ce que vous voulez savoir</p>
-    </div>
-    <div class="faq-list">
-      <details class="faq-item"><summary>Combien de temps dure une séance ?<span class="faq-icon">＋</span></summary><p class="faq-answer">Comptez entre 1h30 et 2h pour les extensions, et environ 1h pour le lash lift ou brow lift. Rose prend le temps nécessaire — jamais à la va-vite.</p></details>
-      <details class="faq-item"><summary>Est-ce que ça abîme les cils naturels ?<span class="faq-icon">＋</span></summary><p class="faq-answer">Non, si la pose est bien faite. Rose utilise des produits certifiés et adapte le poids des extensions à vos cils naturels. Un suivi régulier préserve la santé de vos cils.</p></details>
-      <details class="faq-item"><summary>Combien de temps ça tient ?<span class="faq-icon">＋</span></summary><p class="faq-answer">Les extensions tiennent 3 à 4 semaines selon votre cycle de pousse naturel. Le lash lift dure entre 6 et 8 semaines. Une retouche toutes les 3 semaines suffit pour un rendu impeccable.</p></details>
-      <details class="faq-item"><summary>Que faut-il prévoir pour une séance à domicile ?<span class="faq-icon">＋</span></summary><p class="faq-answer">Juste un espace pour s'allonger confortablement — un lit ou un canapé suffisent. Rose apporte tout le matériel. Prévenez-la si vous avez un animal ou des allergies connues.</p></details>
-      <details class="faq-item"><summary>Je n'ai jamais fait d'extensions — par quoi commencer ?<span class="faq-icon">＋</span></summary><p class="faq-answer">Le lash lift est idéal pour une première fois. Pour les extensions, le style Classique est parfait pour découvrir en douceur. Rose vous conseillera selon votre morphologie dès le début de la séance.</p></details>
-    </div>
-  </div>
-</div>
-
-<div class="footer-cta-wrap">
+<!-- ══ FOOTER CTA ══ -->
+<div class="footer-cta">
   <span class="eyebrow">Réservation en ligne</span>
-  <h2>Prête pour votre<br>transformation ?</h2>
+  <h2>Prête pour votre<br>transformation ? ✨</h2>
   <p>Choisissez votre créneau — confirmation immédiate.</p>
   <div class="footer-cta-btns">
-    <button class="btn-footer-primary" onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face'})">Réserver maintenant</button>
-    <a class="btn-footer-secondary" href="https://wa.me/33767508332?text=Bonjour%20Iconic%20Face%2C%20je%20souhaite%20prendre%20rendez-vous" target="_blank" rel="noopener">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <button class="btn-footer-rdv" onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face'})">
+      Réserver maintenant
+    </button>
+    <a class="btn-footer-wa" href="https://wa.me/33767508332?text=Bonjour%20Iconic%20Face%2C%20je%20souhaite%20prendre%20rendez-vous%20%F0%9F%8C%B8" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
       WhatsApp
     </a>
-    <a class="btn-footer-secondary" href="https://www.instagram.com/iconicface.fr" target="_blank" rel="noopener">Instagram →</a>
   </div>
 </div>
 
+<!-- ══ FOOTER ══ -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="images/logo.png" alt="Logo Iconic Face" onerror="this.style.display='none'">
-      <p class="footer-brand-name">Iconic <span>Face</span></p>
+      <div class="footer-brand-name">Iconic<span class="dot">✦</span>Face</div>
       <p>Extensions cils &amp; sourcils · La Rochelle</p>
-      <p><a href="tel:+33767508332" style="color:var(--gris);">07 67 50 83 32</a></p>
+      <p><a href="tel:+33767508332">07 67 50 83 32</a></p>
       <p>À domicile &amp; salon agréé</p>
     </div>
     <div class="footer-col">
@@ -1210,34 +1163,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#prestations">Extensions Classique</a>
       <a href="#prestations">Volume Russe</a>
       <a href="#prestations">Brow Lift</a>
-      <a href="#forfaits">Forfaits Duo &amp; Trio</a>
-      <a href="#etudiante">Offre étudiante –30%</a>
     </div>
     <div class="footer-col">
       <h5>Informations</h5>
       <a href="https://www.instagram.com/iconicface.fr" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://share.google/12HZAzdlXFxyVYGcF" target="_blank" rel="noopener">Laisser un avis Google ★</a>
-      <a href="#faq">Questions fréquentes</a>
-      <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face'});return false;">Prendre RDV en ligne</a>
+      <a href="https://share.google/12HZAzdlXFxyVYGcF" target="_blank" rel="noopener">Avis Google ★</a>
+      <a href="#faq">FAQ</a>
+      <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face'});return false;">Prendre RDV</a>
     </div>
   </div>
   <p class="footer-bottom">© 2026 Iconic Face · Tous droits réservés · La Rochelle</p>
 </footer>
 
-<!-- BOUTONS FLOTTANTS -->
+<div class="page-end"></div>
+
+<!-- ══ FLOTTANTS ══ -->
 <div class="floating-btns">
-  <button class="float-btn float-btn-calendly"
-    onclick="Calendly.initPopupWidget({url:'https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face'})">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-    <span class="float-label">Prendre RDV</span>
-  </button>
-  <a class="float-btn float-btn-wa"
-    href="https://wa.me/33767508332?text=Bonjour%20Iconic%20Face%2C%20je%20souhaite%20prendre%20rendez-vous%20%F0%9F%8C%B8"
-    target="_blank" rel="noopener">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-    <span class="float-label">WhatsApp</span>
+  <a class="float-call" href="tel:+33767508332">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Appeler Rose
+  </a>
+  <a class="float-wa" href="https://wa.me/33767508332?text=Bonjour%20Iconic%20Face%2C%20je%20souhaite%20prendre%20rendez-vous%20%F0%9F%8C%B8" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   </a>
 </div>
+
+<script>
+function selectPres(el) {
+  document.querySelectorAll('.pres-card').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  const panel = document.getElementById('bookingPanel');
+  document.getElementById('bp-name').textContent = el.dataset.name;
+  document.getElementById('bp-price').textContent = el.dataset.price;
+  document.getElementById('bp-duree').textContent = 'Durée estimée : ' + el.dataset.duree;
+  panel.classList.add('visible');
+  setTimeout(() => panel.scrollIntoView({behavior:'smooth', block:'nearest'}), 150);
+}
+
+function openCalendly() {
+  if (typeof Calendly !== 'undefined') {
+    Calendly.initPopupWidget({url:'https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face'});
+  } else {
+    window.open('https://calendly.com/iconicfaceinc/diagnostic-personnalise-iconic-face', '_blank');
+  }
+}
+</script>
 
 </body>
 </html>
