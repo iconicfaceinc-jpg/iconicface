@@ -857,6 +857,141 @@ footer {
 }
 .dispo-option p { font-size: 12px; color: var(--gris); line-height: 1.5; }
 
+/* ══ BANDEAU ÉTUDIANT ══ */
+.student-banner {
+  background: linear-gradient(135deg, #2D2D3A 0%, #3d3a52 100%);
+  padding: 14px var(--px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.student-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.student-badge {
+  background: var(--violet-deep);
+  color: #fff;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.student-banner-text {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.4;
+}
+.student-banner-text strong { color: var(--violet); }
+.student-banner-cta {
+  background: var(--violet);
+  color: var(--noir);
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 9px 18px;
+  border-radius: 100px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background .2s;
+}
+.student-banner-cta:hover { background: var(--violet-deep); color: #fff; }
+
+/* ══ GALERIE RÉSULTATS ══ */
+.galerie-section {
+  padding: 36px 0 0;
+}
+.galerie-section .section-header {
+  padding: 0 var(--px) 0;
+}
+.galerie-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 20px var(--px) 8px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.galerie-scroll::-webkit-scrollbar { display: none; }
+.galerie-item {
+  flex-shrink: 0;
+  width: 200px;
+  scroll-snap-align: start;
+  background: #1a1825;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid #2e2a40;
+}
+.galerie-photo {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: linear-gradient(160deg, #2a2440 0%, #1a1825 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.galerie-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.galerie-photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  color: #4a4660;
+}
+.galerie-photo-placeholder svg { opacity: 0.5; }
+.galerie-photo-placeholder span {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  color: #4a4660;
+  text-align: center;
+  padding: 0 12px;
+  line-height: 1.4;
+}
+.galerie-caption {
+  padding: 12px 14px 14px;
+}
+.galerie-caption-prestation {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--violet);
+  display: block;
+  margin-bottom: 2px;
+}
+.galerie-caption-duree {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  color: #6b6880;
+}
+.galerie-hint {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gris-light);
+  padding: 4px var(--px) 0;
+  font-style: italic;
+}
+
 /* ══ PADDING BOTTOM pour les flottants ══ */
 .page-end { height: 80px; }
 
@@ -885,6 +1020,15 @@ footer {
     <span>5 ★ sur Google</span>
     <span>Diplômée en esthétique</span>
   </div>
+</div>
+
+<!-- ══ BANDEAU ÉTUDIANT ══ -->
+<div class="student-banner">
+  <div class="student-banner-left">
+    <span class="student-badge">🎓 Offre étudiante</span>
+    <p class="student-banner-text"><strong>-20% sur toutes les prestations</strong> · Sur présentation de ta carte étudiante</p>
+  </div>
+  <a class="student-banner-cta" href="tel:+33767508332">En profiter →</a>
 </div>
 
 <!-- ══ NAV ══ -->
@@ -1064,6 +1208,105 @@ footer {
       <span class="rose-badge">⭐ 5/5 Google</span>
     </div>
   </div>
+</section>
+
+<!-- ══ GALERIE RÉSULTATS ══ -->
+<section class="galerie-section" id="resultats">
+  <div class="section-header">
+    <span class="section-eyebrow">Résultats</span>
+    <h2 class="section-title">Nos réalisations ✨</h2>
+    <p class="section-sub">Résultats réels de nos clientes à La Rochelle</p>
+  </div>
+
+  <div class="galerie-scroll">
+
+    <!-- PHOTO 1 — Remplace "images/resultats/photo-1.jpg" par ton fichier -->
+    <div class="galerie-item">
+      <div class="galerie-photo">
+        <img src="images/resultats/resultat-1.jpg" alt="Résultat Lash Lift La Rochelle"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="galerie-photo-placeholder" style="display:none">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>Ajouter photo-1.jpg</span>
+        </div>
+      </div>
+      <div class="galerie-caption">
+        <span class="galerie-caption-prestation">Lash Lift</span>
+        <!-- Modifie la durée ici -->
+        <span class="galerie-caption-duree">Tenue : 6–8 semaines</span>
+      </div>
+    </div>
+
+    <!-- PHOTO 2 -->
+    <div class="galerie-item">
+      <div class="galerie-photo">
+        <img src="images/resultats/resultat-3.jpg" alt="Résultat Extensions Classique La Rochelle"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="galerie-photo-placeholder" style="display:none">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>Ajouter photo-2.jpg</span>
+        </div>
+      </div>
+      <div class="galerie-caption">
+        <span class="galerie-caption-prestation">Extensions Classique</span>
+        <span class="galerie-caption-duree">Tenue : 3–4 semaines</span>
+      </div>
+    </div>
+
+    <!-- PHOTO 3 -->
+    <div class="galerie-item">
+      <div class="galerie-photo">
+        <img src="images/resultats/resultat-7.jpg" alt="Résultat Volume Russe La Rochelle"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="galerie-photo-placeholder" style="display:none">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>Ajouter photo-3.jpg</span>
+        </div>
+      </div>
+      <div class="galerie-caption">
+        <span class="galerie-caption-prestation">Volume Russe</span>
+        <span class="galerie-caption-duree">Tenue : 3–4 semaines</span>
+      </div>
+    </div>
+
+    <!-- PHOTO 4 -->
+    <div class="galerie-item">
+      <div class="galerie-photo">
+        <img src="images/resultats/resultat-2.jpg" alt="Résultat Iconic Face La Rochelle"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="galerie-photo-placeholder" style="display:none">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>Ajouter photo-5.jpg</span>
+        </div>
+      </div>
+      <div class="galerie-caption">
+        <span class="galerie-caption-prestation">Lash Lift</span>
+        <span class="galerie-caption-duree">Tenue : 6–8 semaines</span>
+      </div>
+    </div>
+
+    <!-- PHOTO 6 -->
+    <div class="galerie-item">
+      <div class="galerie-photo">
+        <img src="images/resultats/resultat-4.jpg" alt="Résultat Iconic Face La Rochelle"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="galerie-photo-placeholder" style="display:none">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span>Ajouter photo-6.jpg</span>
+        </div>
+      </div>
+      <div class="galerie-caption">
+        <span class="galerie-caption-prestation">Extensions Classique</span>
+        <span class="galerie-caption-duree">Tenue : 3–4 semaines</span>
+      </div>
+    </div>
+
+    <!-- ➕ Pour ajouter une photo : duplique un bloc galerie-item,
+         change le src en "images/resultats/photo-7.jpg",
+         et modifie la prestation + durée dans la légende -->
+
+  </div>
+  <p class="galerie-hint">← Fais glisser pour voir plus →</p>
 </section>
 
 <!-- ══ AVIS ══ -->
